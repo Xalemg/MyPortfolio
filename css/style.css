@@ -1,1 +1,12 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  margin: 0;
+  padding: 0;
+}
+
+body nav .menu {
+  list-style-type: none;
+}
+/*# sourceMappingURL=style.css.map */

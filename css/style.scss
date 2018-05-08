@@ -1,3 +1,12 @@
-body{
-    
+body {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin: 0;
+    padding: 0;
+    nav{
+        .menu {
+            list-style-type: none;
+        }
+    }
 }
