@@ -1,12 +1,29 @@
-body {
+* {
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 20% 80%;
   margin: 0;
   padding: 0;
 }
 
+body {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "menu header" "menu main";
+}
+
+body header {
+  grid-area: header;
+}
+
+body nav {
+  grid-area: menu;
+}
+
 body nav .menu {
   list-style-type: none;
+}
+
+body main {
+  grid-area: main;
 }
 /*# sourceMappingURL=style.css.map */
