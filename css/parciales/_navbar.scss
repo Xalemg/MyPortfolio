@@ -1,0 +1,27 @@
+nav {
+    background: $blanco;
+    text-align: center;
+    display: flex;
+    position: fixed;
+    top: 0;
+    align-content: center;
+    height: 8vh;
+    width: 100%;
+    flex: wrap;
+    z-index: 1000;
+    align-items: center;
+    img{
+        float: left;
+        margin-left: 1vw;
+    }
+    h1 {
+        font-weight: $ff-regular;
+        font-size: 1.3rem;
+        display: block;
+        width: 90vw;
+        margin-bottom: 0;
+    }
+    ul {
+        display: none;
+    }
+}

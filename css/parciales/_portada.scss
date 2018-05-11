@@ -1,0 +1,22 @@
+.portada{
+    background-image: url(../img/background1.jpg);
+    height: 100%;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    opacity: 60%;
+    display: flex;
+    position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    text-align: center;
+    justify-content: center;
+    top: 0;
+    align-content: center;
+    align-items: center;   
+    h1 {
+        span {
+            display: block;
+        }
+    }
+}

@@ -1,5 +1,22 @@
 body {
     color: $negro;
     font-family: $ff-regular;
-    color: grey;
+    line-height: 1.6;
+    color: $blanco;
+    background-color: $grisOscuro;
+}
+h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+h1 {
+    color: $azulOscuro;
+    font-size: 3.375rem;
+    font-weight: $fw-bold;
+    line-height: 1;
+    font-family: $ff-titulo;
+}
+h2 {
+    font-family: $ff-titulo;
+    font-size:  3.625rem;
 }
