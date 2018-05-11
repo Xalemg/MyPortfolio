@@ -292,6 +292,12 @@ template {
   display: none;
 }
 
+body {
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  color: grey;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
