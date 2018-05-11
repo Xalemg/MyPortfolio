@@ -1,0 +1,32 @@
+/* Coolors Exported Palette - coolors.co/003049-d62828-2191fb-f72e2e-2193ff */
+/* HSL */
+/* RGB */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+    "menu header"
+    "menu main";
+    header{
+        grid-area: header;
+    }
+    nav{
+        grid-area: menu;
+        .menu {
+            list-style-type: none;
+        }
+    }
+    main {
+        grid-area: main;
+    }*/
+  display: flex;
+}
+/*# sourceMappingURL=main.css.map */

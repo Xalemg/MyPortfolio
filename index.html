@@ -4,17 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow" rel="stylesheet"> 
     <title>Alejandro Duque</title>
 </head>
 <body>
-    <header>
-        <dir>
-        <h1 id="tittle">Alejandro Duque Quintana</h1>
-        <h3>Mi Portfolio</h3>
-     </dir>
-    </header>
     <nav>
         <img src="img/menu.svg" alt="desplegable" id="menu_logo">
         <ul class="menu">
@@ -24,9 +18,82 @@
             <li id="experiencia"> <img src="" alt="">Experinecia</li>
             <li id="contacto"> <img src="" alt="">Contacto</li>
         </ul>
+        <h1>Alejandro Duque Quintana</h1>
     </nav>
     <div class="main">
-        <div></div>
+        <section class="portada">
+            <h1>Pensando con Creatividad</h1>
+        </section>
+        <section class="sobreMi">
+            <h2>Sobre mi</h2>
+            <img src="img/yo.jpg" alt="Foto retrato de mi">
+            <p>
+                Hola soy Alex, un desarrollador
+                 de Getafe, Madrid. Con conocimiento
+                 en HTML, CSS, Javascript, Java y
+                 Android. Desde pequeño he sentido 
+                 una gran pasión y curiosidad por la 
+                 tecnologia, lo que me suele conducir
+                 a crear mis porpios proyectos.
+            </p>
+        </section>
+        <section class="habilidades">
+            <h2>Habilidades</h2>
+            <div class="selector"><img class="icono-Elejido" src="" alt=""></div>
+            <div class="grid-iconos">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="educacion">
+            <h2>Educación</h2>
+        </br>
+        <ul class="titulos">
+            <li>2010 - Bachillerato científico en I.E.S Laguna de Joatzel</li>
+            <li>2015 -Actualidad Grado en Ingenieria informatica </li>
+            <li>2017 Curso Desarrollo Android por CICE</li>
+            <li>2015 Titulo First Certificate por Cambridge (B1)</li>
+            <li>2016 Curso de Ingles C1 por Idiomas4U</li>
+        </ul>
+        </section>
+        <section class="experiencia">
+            <h2>Experiencia</h2>
+            <ul class="trabajos">
+                <li>2018 - Desarrollador en Quelinka</li>
+            </ul>
+        </section>
+        <section>
+            <form action="">
+                <label  class="nombre">
+                    Nombre:
+                    <input type="text" id="nombre">
+                </label>
+                <label class="email">
+                    Email:
+                    <input type="email">
+                </label>
+                <label class="mensaje">
+                    Mensaje
+                    <textarea name="mensaje" id="mensaje"></textarea>
+                </label>
+            </form>
+        </section>
     </div>
+    <footer>
+        <p>¡Comprueba el responsive de esta página</p>
+        <p>Sigueme en las redes sociales</p>
+        <div class="iconosRedes">
+            <img src="" alt="" class="iconoRedes">
+            <img src="" alt="" class="iconoRedes">
+            <img src="" alt="" class="iconoRedes">
+        </div>
+        <p class="copyright">Copyright 2017 Portfolio de Alex</p>
+    </footer>
 </body>
 </html>
