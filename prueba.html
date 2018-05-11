@@ -7,22 +7,33 @@
     <title>Prueba</title>
     <style>
         .trapezoid {
+            box-sizing: border-box;
             height: 200px;
             width: 30%;
             position: relative;
             background-color: rebeccapurple;
             -webkit-clip-path: polygon(100% 10%, 100% 90%, 0 100%, 0 0);
             clip-path: polygon(100% 10%, 100% 90%, 0 100%, 0 0);
-            border-top: 20px solid red;          
         }
+
+        .trapezoid2 {
+            -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+            width: 200px;
+         }
+         .content {
+             display: block;
+         }
 
     </style>
 </head>
 <body>
     <div class="trapezoid">
-        <div class="margen">
-            
-        </div>
+        <div class="margen"></div>
+        <div class="content">asd sadasdas dsad dasd adasd asdasas</div>
+    </div>
+    <div class="trapezoid trapezoid2">
+        <div class="margen"></div>
         <div class="content">asdas</div>
     </div>
 </body>
