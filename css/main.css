@@ -298,37 +298,36 @@ template {
   float: left;
 }
 
-.sobreMi {
+.sobreMi, .educacion {
   margin-top: -7vh;
   margin-bottom: -8vh;
   padding-top: 7vh;
   float: left;
   background-color: #0C6F75;
-  width: 95%;
+  width: 97%;
   height: 110vh;
   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
   clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
 }
 
-.sobreMi:after {
+.sobreMi:after, .educacion:after {
   content: '';
   display: block;
   clear: both;
 }
 
-.habilidades {
+.habilidades, .experiencia {
   float: right;
   padding-top: 7vh;
-  margin-top: -2.5vh;
   background-color: #FFFFFF;
   color: #0F3057;
-  width: 94%;
+  width: 97%;
   height: 110vh;
   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
 }
 
-.habilidades:after {
+.habilidades:after, .experiencia:after {
   content: '';
   display: block;
   clear: both;
@@ -417,12 +416,12 @@ nav ul {
 
 .sobreMi {
   position: relative;
-  margin-top: -10vh;
 }
 
 .sobreMi h2 {
   margin-left: 10%;
   margin-bottom: 5vh;
+  margin-top: 5%;
   font-size: 3.2rem;
 }
 
@@ -432,8 +431,8 @@ nav ul {
 
 .sobreMi p {
   margin-left: 10%;
-  margin-right: 10%;
-  line-height: 2.3rem;
+  margin-right: 5%;
+  line-height: 1.6rem;
   font-size: 1,125rem;
 }
 
@@ -450,6 +449,10 @@ nav ul {
 .habilidades .selector {
   padding-left: 10%;
   padding-right: 10%;
+}
+
+.educacion {
+  position: relative;
 }
 
 body {

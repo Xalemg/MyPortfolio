@@ -9,7 +9,7 @@
     padding-top: 7vh;
     float: left;
     background-color: $verdeApagado;
-    width: 95%;
+    width: 97%;
     height: 110vh;
     -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
     clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
@@ -22,10 +22,9 @@
 %trapecioDcha {    
     float: right;
     padding-top: 7vh;
-    margin-top: -2.5vh;
     background-color: $blanco;
     color: $azulOscuro;
-    width: 94%;
+    width: 97%;
     height: 110vh;
     -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
