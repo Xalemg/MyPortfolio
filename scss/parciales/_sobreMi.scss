@@ -1,8 +1,21 @@
 
 .sobreMi{
-    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-    background-color: $verdeApagado;
-    width: 95%;
-    height: 100vh;
+    @extend %trapecioIzda;
+    position: relative;
+    margin-top: -10vh;
+    
+    h2 {
+        margin-left: 10%;
+        margin-bottom: 5vh;
+        font-size: $fs-titulos;
+    }
+    img {
+        margin-left: 15%;
+    }
+    p {
+        margin-left: 10%;
+        margin-right: 10%;
+        line-height: 2.3rem;
+        font-size: 1,125rem;
+    }
 }

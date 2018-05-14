@@ -294,7 +294,44 @@ template {
 /* RGB */
 .portada {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
+  float: left;
+}
+
+.sobreMi {
+  margin-top: -7vh;
+  margin-bottom: -8vh;
+  padding-top: 7vh;
+  float: left;
+  background-color: #0C6F75;
+  width: 95%;
+  height: 110vh;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+}
+
+.sobreMi:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.habilidades {
+  float: right;
+  padding-top: 7vh;
+  margin-top: -2.5vh;
+  background-color: #FFFFFF;
+  color: #0F3057;
+  width: 94%;
+  height: 110vh;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
+}
+
+.habilidades:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 * {
@@ -325,6 +362,7 @@ h1 {
 h2 {
   font-family: "Arsenal", sans-serif;
   font-size: 3.625rem;
+  font-weight: 400;
 }
 
 nav {
@@ -378,11 +416,40 @@ nav ul {
 }
 
 .sobreMi {
-  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-  background-color: #0C6F75;
-  width: 95%;
-  height: 100vh;
+  position: relative;
+  margin-top: -10vh;
+}
+
+.sobreMi h2 {
+  margin-left: 10%;
+  margin-bottom: 5vh;
+  font-size: 3.2rem;
+}
+
+.sobreMi img {
+  margin-left: 15%;
+}
+
+.sobreMi p {
+  margin-left: 10%;
+  margin-right: 10%;
+  line-height: 2.3rem;
+  font-size: 1,125rem;
+}
+
+.habilidades {
+  text-align: right;
+}
+
+.habilidades h2 {
+  font-size: 3.2rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.habilidades .selector {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 body {

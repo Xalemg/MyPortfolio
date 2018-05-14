@@ -1,4 +1,38 @@
 %portada {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
+    float: left;
+}
+%trapecioIzda {
+    margin-top: -7vh;
+    margin-bottom: -8vh;
+    padding-top: 7vh;
+    float: left;
+    background-color: $verdeApagado;
+    width: 95%;
+    height: 110vh;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+%trapecioDcha {    
+    float: right;
+    padding-top: 7vh;
+    margin-top: -2.5vh;
+    background-color: $blanco;
+    color: $azulOscuro;
+    width: 94%;
+    height: 110vh;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
 }

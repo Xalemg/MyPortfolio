@@ -1,0 +1,14 @@
+.habilidades {
+    @extend %trapecioDcha;
+    text-align: right;
+
+    h2 {
+        font-size: $fs-titulos;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .selector {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
