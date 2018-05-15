@@ -1,0 +1,23 @@
+.contacto {
+    @extend %contacto;
+    text-align: center;
+    form {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: space-around;
+        flex-direction: column;
+        margin-top: -5vh;
+        justify-content: space-between;
+        label {
+            text-align: left;
+            width: 90%;
+            input {
+                width:100%;
+            }
+            textarea {
+                width: 100%;
+            }
+        }
+    }
+}

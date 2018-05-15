@@ -1,4 +1,17 @@
 .educacion {
     @extend %trapecioIzda;
     position: relative;
+    h2 {
+        margin-bottom: 2vh;
+        margin-left: 8%;
+    }
+    ul {
+        margin-top: 0;
+        margin-left:11%;
+        padding-left:0; 
+        li{
+            font-size: 0.9rem;
+            margin:  6vh 0;
+        }
+    }
 }

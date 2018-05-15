@@ -19,6 +19,7 @@
         clear: both;
     }
 }
+
 %trapecioDcha {    
     float: right;
     padding-top: 7vh;
@@ -28,6 +29,23 @@
     height: 110vh;
     -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+%contacto {
+    width: 100%;
+    margin-top: -15vh;
+    margin-bottom: -8vh;
+    padding-top: 7%;
+    padding-bottom: 7vh;
+    float: left;
+    background-color: $verdeApagado;
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
 
     &:after {
         content: '';

@@ -1,4 +1,13 @@
 .experiencia {
     @extend %trapecioDcha;
-    
+    text-align: right;
+    padding-top: 12vh;
+    h2 {
+        padding-right: 8%;
+    }
+    ul {
+        padding-right: 8%; 
+        padding-left: 8%; 
+
+    }
 }

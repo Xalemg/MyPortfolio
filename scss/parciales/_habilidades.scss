@@ -8,7 +8,45 @@
         padding-right: 10%;
     }
     .selector {
-        padding-left: 10%;
-        padding-right: 10%;
+
+        background-color: $azulOscuro;
+        width: 85%;
+        height: 100px;
+        margin: 0 auto;
+        color: $blanco;
+        padding-left: 2%;
+        padding-right: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: space-around;
+        
+        .huecoIconos {
+            height: 82px;
+            width: 82px;
+            border-radius: 50%;
+            background: gray;
+        }
+        p {
+            text-align: right;
+            width: 70%;
+            float: right;
+            font-size: 1rem;
+        }
+    }
+    .grid-iconos {
+        width: 90%;
+        background-color: $blanco;
+        height: 250px;
+        margin: 7% auto 0 auto;
+        display: flex;
+        align-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        img {
+            height: 82px;
+            width: 82px;
+        }
     }
 }

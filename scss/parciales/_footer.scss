@@ -1,0 +1,14 @@
+footer {
+    padding-top: 60px;
+    text-align: center;
+    .mensajeResponsive {
+        width: 96%;
+        font-weight: $fw-bold;
+    }
+    .iconosRedes {
+        img {
+            width: 56px;
+            height: 56px;
+        }
+    }
+}

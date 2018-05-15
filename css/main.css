@@ -303,7 +303,7 @@ template {
   margin-bottom: -8vh;
   padding-top: 7vh;
   float: left;
-  background-color: #0C6F75;
+  background-color: #1B487D;
   width: 97%;
   height: 110vh;
   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
@@ -333,6 +333,24 @@ template {
   clear: both;
 }
 
+.contacto {
+  width: 100%;
+  margin-top: -15vh;
+  margin-bottom: -8vh;
+  padding-top: 7%;
+  padding-bottom: 7vh;
+  float: left;
+  background-color: #1B487D;
+  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.contacto:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -343,6 +361,12 @@ body {
   line-height: 1.6;
   color: #FFFFFF;
   background-color: #333330;
+}
+
+.main:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 h1, h2, h3 {
@@ -359,9 +383,14 @@ h1 {
 }
 
 h2 {
+  margin-top: 5%;
   font-family: "Arsenal", sans-serif;
-  font-size: 3.625rem;
+  font-size: 3.2rem;
   font-weight: 400;
+}
+
+ul {
+  list-style-type: none;
 }
 
 nav {
@@ -376,6 +405,7 @@ nav {
   flex: wrap;
   z-index: 1000;
   align-items: center;
+  box-shadow: 0 0 5px grey;
 }
 
 nav img {
@@ -421,7 +451,6 @@ nav ul {
 .sobreMi h2 {
   margin-left: 10%;
   margin-bottom: 5vh;
-  margin-top: 5%;
   font-size: 3.2rem;
 }
 
@@ -447,12 +476,124 @@ nav ul {
 }
 
 .habilidades .selector {
-  padding-left: 10%;
-  padding-right: 10%;
+  background-color: #0F3057;
+  width: 85%;
+  height: 100px;
+  margin: 0 auto;
+  color: #FFFFFF;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: space-around;
+}
+
+.habilidades .selector .huecoIconos {
+  height: 82px;
+  width: 82px;
+  border-radius: 50%;
+  background: gray;
+}
+
+.habilidades .selector p {
+  text-align: right;
+  width: 70%;
+  float: right;
+  font-size: 1rem;
+}
+
+.habilidades .grid-iconos {
+  width: 90%;
+  background-color: #FFFFFF;
+  height: 250px;
+  margin: 7% auto 0 auto;
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.habilidades .grid-iconos img {
+  height: 82px;
+  width: 82px;
 }
 
 .educacion {
   position: relative;
+}
+
+.educacion h2 {
+  margin-bottom: 2vh;
+  margin-left: 8%;
+}
+
+.educacion ul {
+  margin-top: 0;
+  margin-left: 11%;
+  padding-left: 0;
+}
+
+.educacion ul li {
+  font-size: 0.9rem;
+  margin: 6vh 0;
+}
+
+.experiencia {
+  text-align: right;
+  padding-top: 12vh;
+}
+
+.experiencia h2 {
+  padding-right: 8%;
+}
+
+.experiencia ul {
+  padding-right: 8%;
+  padding-left: 8%;
+}
+
+.contacto {
+  text-align: center;
+}
+
+.contacto form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-around;
+  flex-direction: column;
+  margin-top: -5vh;
+  justify-content: space-between;
+}
+
+.contacto form label {
+  text-align: left;
+  width: 90%;
+}
+
+.contacto form label input {
+  width: 100%;
+}
+
+.contacto form label textarea {
+  width: 100%;
+}
+
+footer {
+  padding-top: 60px;
+  text-align: center;
+}
+
+footer .mensajeResponsive {
+  width: 96%;
+  font-weight: 900;
+}
+
+footer .iconosRedes img {
+  width: 56px;
+  height: 56px;
 }
 
 body {
