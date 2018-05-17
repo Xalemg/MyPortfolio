@@ -6,6 +6,16 @@ body {
     font-family: $ff-regular;
     line-height: 1.6;
     color: $blanco;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    z-index: -1;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+.main {
     background-color: $grisOscuro;
 }
 .main:after {

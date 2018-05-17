@@ -8,7 +8,6 @@
         padding-right: 10%;
     }
     .selector {
-
         background-color: $azulOscuro;
         width: 85%;
         height: 100px;
@@ -31,9 +30,19 @@
             text-align: right;
             width: 70%;
             float: right;
+            height: 50px;
             font-size: 1rem;
         }
+        .medidorHabilidad {
+            width: 160px;
+            display: none;
+            float: right;
+            margin-right: 5%;
+            height: 10px;
+            background-color: $blanco;
+        }
     }
+
     .grid-iconos {
         width: 90%;
         background-color: $blanco;

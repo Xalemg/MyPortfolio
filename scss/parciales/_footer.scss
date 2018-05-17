@@ -6,9 +6,22 @@ footer {
         font-weight: $fw-bold;
     }
     .iconosRedes {
+        display: flex;
+        width: 100%;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
         img {
             width: 56px;
             height: 56px;
         }
+        .linkedin {
+            width: 62px;
+            height: 62px;
+            margin-right: 25px;
+        }
+    }
+    .copyright {
+        font-size: 0.5em;
     }
 }

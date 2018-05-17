@@ -360,7 +360,19 @@ body {
   font-family: "Open Sans", sans-serif;
   line-height: 1.6;
   color: #FFFFFF;
-  background-color: #333330;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  z-index: -1;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.main {
+  background-color: rgba(51, 51, 48, 0.466);
 }
 
 .main:after {
@@ -426,7 +438,6 @@ nav ul {
 }
 
 .portada {
-  background-image: url(../img/background1.jpg);
   height: 100vh;
   width: 100%;
   background-position: center;
@@ -438,6 +449,10 @@ nav ul {
   top: 0;
   align-content: center;
   align-items: center;
+}
+
+.portada h1 {
+  color: #FFFFFF;
 }
 
 .portada h1 span {
@@ -500,7 +515,17 @@ nav ul {
   text-align: right;
   width: 70%;
   float: right;
+  height: 50px;
   font-size: 1rem;
+}
+
+.habilidades .selector .medidorHabilidad {
+  width: 160px;
+  display: none;
+  float: right;
+  margin-right: 5%;
+  height: 10px;
+  background-color: #FFFFFF;
 }
 
 .habilidades .grid-iconos {
@@ -581,6 +606,15 @@ nav ul {
   width: 100%;
 }
 
+.contacto form button {
+  margin-top: 20px;
+  background-color: #00800D;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  padding: 0.3em 0.5em;
+}
+
 footer {
   padding-top: 60px;
   text-align: center;
@@ -591,9 +625,27 @@ footer .mensajeResponsive {
   font-weight: 900;
 }
 
+footer .iconosRedes {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
 footer .iconosRedes img {
   width: 56px;
   height: 56px;
+}
+
+footer .iconosRedes .linkedin {
+  width: 62px;
+  height: 62px;
+  margin-right: 25px;
+}
+
+footer .copyright {
+  font-size: 0.5em;
 }
 
 body {
