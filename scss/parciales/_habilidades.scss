@@ -11,8 +11,7 @@
     }
     .selector {
         background-color: $azulOscuro;
-        width: 85%;
-        height: 100px;
+        width: 90%;
         margin: 0 auto;
         color: $blanco;
         padding-left: 2%;
@@ -25,39 +24,51 @@
         .huecoIconos {
             height: 82px;
             width: 82px;
+            margin: 1em 0;
             border-radius: 50%;
             background: gray;
         }
         p {
             text-align: right;
             width: 70%;
-            float: right;
             height: 50px;
-            font-size: 1rem;
+            font-size: 1em;
         }
-        .medidorHabilidad {
-            width: 160px;
-            display: none;
-            float: right;
-            margin-right: 5%;
-            height: 10px;
+    }
+    .medidorHabilidad {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+        background-color: $azulOscuro;
+        padding-bottom: 5px;
+        .nivel {
             background-color: $blanco;
+            margin: 0 auto;
+            width: 95%;
+            height: 16px;
+            border: 2px solid $azulOscuro;
+            .seccion {
+                width: 20%;
+                height: 100%;
+                border: 2px solid $blanco;
+                background-color: green;
+            }
         }
     }
 
     .grid-iconos {
         width: 90%;
         background-color: $blanco;
-        height: 250px;
-        margin: 7% auto 0 auto;
+        height: 280px;
+        margin: 5vh auto 0 auto;
         display: flex;
         align-content: space-around;
         flex-wrap: wrap;
-        align-items: center;
         justify-content: space-evenly;
         img {
             height: 82px;
             width: 82px;
         }
+
     }
 }

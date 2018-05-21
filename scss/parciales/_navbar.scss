@@ -11,10 +11,6 @@ nav {
     z-index: 1000;
     align-items: center;
     box-shadow: 0 0 5px grey;
-    img{
-        float: left;
-        margin-left: 1vw;
-    }
     h1 {
         font-weight: $ff-regular;
         font-size: 1.3rem;
@@ -23,6 +19,34 @@ nav {
         margin-bottom: 0;
     }
     ul {
-        display: none;
+        display:table-row;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        left: -101vw;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 1em;
+        background-color: $backgroundMenu;
+        li {
+            height: 20%;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            a {
+                line-height: 1em;
+                margin: 0 auto;
+                text-decoration: none;
+                color: $blanco;
+                font-weight: $fw-bold;
+            }
+        }
+    }
+    @import 'animacionMenu';
+    .tcon-transform+ul {
+        top: 0;
+        left: 0;
+        
     }
 }

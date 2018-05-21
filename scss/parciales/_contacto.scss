@@ -10,20 +10,21 @@
         flex-wrap: wrap;
         align-content: space-around;
         flex-direction: column;
-        margin-top: -5vh;
         justify-content: space-between;
         label {
             text-align: left;
             width: 90%;
             input {
                 width:100%;
+                margin: 2vh 0;
             }
             textarea {
                 width: 100%;
+                margin: 3vh 0;
             }
         }
         button {
-            margin-top: 20px;
+            margin-top: 1.6rem;
             background-color: #00800D;
             border: none;
             color: $blanco;

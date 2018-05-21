@@ -48,7 +48,7 @@
 }
 %contacto {
     width: 100%;
-    margin-top: -15vh;
+    margin-top: -25vh;
     margin-bottom: -8vh;
     padding-top: 7%;
     padding-bottom: 7vh;
@@ -58,7 +58,7 @@
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
     @supports (display: grid) {
         padding-top: 5rem;
-        margin-top: -20vh;
+        margin-top: -25vh;
         padding-bottom: 0;
         height: auto;
 

@@ -10,13 +10,16 @@
 </head>
 <body>
     <nav>
-        <img src="img/menu.svg" alt="desplegable" id="menu_logo">
-        <ul class="menuDropdown">
-            <li id="sobre_mi"><img src="" alt=""> Sobre mi</li>
-            <li id="educacion"> <img src="" alt=""> Educación</li>
-            <li id="habilidades"> <img src="" alt="">Habilidades</li>
-            <li id="experiencia"> <img src="" alt="">Experinecia</li>
-            <li id="contacto"> <img src="" alt="">Contacto</li>
+        <button type="button" class="tcon tcon-menu--xcross" aria-label="toggle menu">
+            <span class="tcon-menu__lines" aria-hidden="true"></span>
+            <span class="tcon-visuallyhidden">toggle menu</span>
+          </button>
+        <ul class="menuDropdown" id="menu">
+            <li id="sobreMi"> <a href=""> Sobre Mi</a></li>
+            <li id="habilidades"> <a href="">Habilidades</a></li>
+            <li id="educacion"> <a href=""> Educación</a></li>
+            <li id="experiencia"> <a href="">Experiencia</a></li>
+            <li id="contacto"> <a href="">Contacto</a></li>
         </ul>
         <h1>Alejandro Duque Quintana</h1>
     </nav>
@@ -46,7 +49,11 @@
             <div class="selector">
                 <div class="huecoIconos"><img class="icono-Elejido" src="" alt=""></div>
                 <p>Pulsa un icono para ver más información.</p>
-                <div class="medidorHabilidad"></div>
+            </div>
+            <div class="medidorHabilidad">
+                <div class="nivel">
+                    <div class="seccion"></div>
+                </div>
             </div>
             <div class="grid-iconos">
                 <img src="img/php.svg" alt="Php">
@@ -103,5 +110,9 @@
         </div>
         <p class="copyright">© Copyright 2018 Portfolio de Alex</p>
     </footer>
+    <script src="js/menu.js"></script>
+    <script>
+    transformicons.add('.tcon');
+</script>
 </body>
 </html>

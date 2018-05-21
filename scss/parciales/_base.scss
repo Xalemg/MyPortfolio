@@ -20,17 +20,14 @@ body {
     @supports (display: grid) {
         display: grid;
         grid-template-columns: 1fr 9fr 9fr 1fr;
-        grid-template-rows: 90vh 110vh 110vh 110vh 100vh 80vh;
-        grid-template-areas:  "portada portada portada portada"
-                    "sobreMi sobreMi sobreMi ."
-                    " . habilidades habilidades habilidades"
-                    "educacion educacion educacion ."
-                    ". experiencia experiencia experiencia"
-                    "contacto contacto contacto contacto"
-    }
-    @media (min-width: 800px) {
-        grid-template-columns: 1fr 360px 360px 1fr;
-            font-size: 20px;
+        grid-template-rows: 90vh 110vh 110vh 110vh 100vh 500px;
+        grid-template-areas:
+        "portada portada portada portada"
+        "sobreMi sobreMi sobreMi ."
+        " . habilidades habilidades habilidades"
+        "educacion educacion educacion ."
+        ". experiencia experiencia experiencia"
+        "contacto contacto contacto contacto"
     }
 }
 .main:after {
@@ -44,7 +41,7 @@ h1, h2, h3 {
 }
 h1 {
     color: $azulOscuro;
-    font-size: 3.375rem;
+    font-size: 3.375em;
     font-weight: $fw-bold;
     line-height: 1;
     font-family: $ff-titulo;
@@ -52,9 +49,18 @@ h1 {
 h2 {
     margin-top: 5%;
     font-family: $ff-titulo;
-    font-size:  3.2rem;
+    font-size:  3.2em;
     font-weight: $fw-normal;
 }
+
  ul {
      list-style-type: none;
  }
+ @media (min-width: 800px) {
+    body {
+        font-size: 20px;
+        .main {
+            grid-template-columns: 1fr 360px 360px 1fr;
+        }
+    }
+}
