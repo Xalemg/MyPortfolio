@@ -10,7 +10,10 @@
     justify-content: center;
     top: 0;
     align-content: center;
-    align-items: center;   
+    align-items: center;
+    @supports (display : grid) {
+        grid-area: portada;
+    }
     h1 {
         color: $blanco;
         span {

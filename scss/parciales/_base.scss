@@ -17,6 +17,21 @@ body {
 }
 .main {
     background-color: $grisOscuro;
+    @supports (display: grid) {
+        display: grid;
+        grid-template-columns: 1fr 9fr 9fr 1fr;
+        grid-template-rows: 90vh 110vh 110vh 110vh 100vh 80vh;
+        grid-template-areas:  "portada portada portada portada"
+                    "sobreMi sobreMi sobreMi ."
+                    " . habilidades habilidades habilidades"
+                    "educacion educacion educacion ."
+                    ". experiencia experiencia experiencia"
+                    "contacto contacto contacto contacto"
+    }
+    @media (min-width: 800px) {
+        grid-template-columns: 1fr 360px 360px 1fr;
+            font-size: 20px;
+    }
 }
 .main:after {
     content: '';

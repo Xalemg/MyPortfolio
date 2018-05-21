@@ -1,7 +1,9 @@
 .habilidades {
     @extend %trapecioDcha;
     text-align: right;
-
+    @supports (display : grid) {
+        grid-area: habilidades;
+    }
     h2 {
         font-size: $fs-titulos;
         padding-left: 10%;

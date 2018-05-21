@@ -1,6 +1,8 @@
 footer {
     padding-top: 60px;
     text-align: center;
+    @supports (display : grid) {
+    }
     .mensajeResponsive {
         width: 96%;
         font-weight: $fw-bold;

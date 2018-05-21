@@ -1,6 +1,9 @@
 
 .sobreMi{
     @extend %trapecioIzda;
+    @supports (display : grid) {
+        grid-area: sobreMi;
+    }
     position: relative;
     h2 {
         margin-left: 10%;

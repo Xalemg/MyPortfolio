@@ -316,6 +316,14 @@ template {
   clear: both;
 }
 
+@supports (display: grid) {
+  .sobreMi, .educacion {
+    width: 100%;
+    height: 110%;
+    margin-top: 0;
+  }
+}
+
 .habilidades, .experiencia {
   float: right;
   padding-top: 7vh;
@@ -323,8 +331,17 @@ template {
   color: #0F3057;
   width: 97%;
   height: 110vh;
+  margin-top: -7vh;
   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
+}
+
+@supports (display: grid) {
+  .habilidades, .experiencia {
+    width: 100%;
+    height: 110%;
+    margin-top: 0;
+  }
 }
 
 .habilidades:after, .experiencia:after {
@@ -343,6 +360,15 @@ template {
   background-color: #1B487D;
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
   clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+@supports (display: grid) {
+  .contacto {
+    padding-top: 5rem;
+    margin-top: -20vh;
+    padding-bottom: 0;
+    height: auto;
+  }
 }
 
 .contacto:after {
@@ -373,6 +399,22 @@ body {
 
 .main {
   background-color: rgba(51, 51, 48, 0.466);
+}
+
+@supports (display: grid) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 9fr 9fr 1fr;
+    grid-template-rows: 90vh 110vh 110vh 110vh 100vh 80vh;
+    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
+  }
+}
+
+@media (min-width: 800px) {
+  .main {
+    grid-template-columns: 1fr 360px 360px 1fr;
+    font-size: 20px;
+  }
 }
 
 .main:after {
@@ -412,7 +454,7 @@ nav {
   position: fixed;
   top: 0;
   align-content: center;
-  height: 8vh;
+  height: 50px;
   width: 100%;
   flex: wrap;
   z-index: 1000;
@@ -451,6 +493,12 @@ nav ul {
   align-items: center;
 }
 
+@supports (display: grid) {
+  .portada {
+    grid-area: portada;
+  }
+}
+
 .portada h1 {
   color: #FFFFFF;
 }
@@ -461,6 +509,12 @@ nav ul {
 
 .sobreMi {
   position: relative;
+}
+
+@supports (display: grid) {
+  .sobreMi {
+    grid-area: sobreMi;
+  }
 }
 
 .sobreMi h2 {
@@ -482,6 +536,12 @@ nav ul {
 
 .habilidades {
   text-align: right;
+}
+
+@supports (display: grid) {
+  .habilidades {
+    grid-area: habilidades;
+  }
 }
 
 .habilidades h2 {
@@ -549,6 +609,12 @@ nav ul {
   position: relative;
 }
 
+@supports (display: grid) {
+  .educacion {
+    grid-area: educacion;
+  }
+}
+
 .educacion h2 {
   margin-bottom: 2vh;
   margin-left: 8%;
@@ -570,6 +636,12 @@ nav ul {
   padding-top: 12vh;
 }
 
+@supports (display: grid) {
+  .experiencia {
+    grid-area: experiencia;
+  }
+}
+
 .experiencia h2 {
   padding-right: 8%;
 }
@@ -581,6 +653,12 @@ nav ul {
 
 .contacto {
   text-align: center;
+}
+
+@supports (display: grid) {
+  .contacto {
+    grid-area: contacto;
+  }
 }
 
 .contacto form {

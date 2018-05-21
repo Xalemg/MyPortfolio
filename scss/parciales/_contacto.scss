@@ -1,6 +1,9 @@
 .contacto {
     @extend %contacto;
     text-align: center;
+    @supports (display: grid) {
+        grid-area: contacto;
+    }
     form {
         display: flex;
         align-items: center;

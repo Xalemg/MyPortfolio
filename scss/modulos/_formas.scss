@@ -18,6 +18,11 @@
         display: block;
         clear: both;
     }
+    @supports (display: grid) {
+        width: 100%;
+        height: 110%;
+        margin-top: 0;
+    }
 }
 
 %trapecioDcha {    
@@ -27,9 +32,14 @@
     color: $azulOscuro;
     width: 97%;
     height: 110vh;
+    margin-top: -7vh;
     -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
-
+    @supports (display: grid) {
+        width: 100%;
+        height: 110%;
+        margin-top: 0;
+    }
     &:after {
         content: '';
         display: block;
@@ -46,7 +56,13 @@
     background-color: $verdeApagado;
     -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    @supports (display: grid) {
+        padding-top: 5rem;
+        margin-top: -20vh;
+        padding-bottom: 0;
+        height: auto;
 
+    }
     &:after {
         content: '';
         display: block;

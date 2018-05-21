@@ -1,5 +1,8 @@
 .experiencia {
     @extend %trapecioDcha;
+    @supports (display : grid) {
+        grid-area: experiencia;
+    }
     text-align: right;
     padding-top: 12vh;
     h2 {

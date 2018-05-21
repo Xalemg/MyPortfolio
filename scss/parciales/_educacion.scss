@@ -1,6 +1,9 @@
 .educacion {
     @extend %trapecioIzda;
     position: relative;
+    @supports (display : grid) {
+        grid-area: educacion;
+    }
     h2 {
         margin-bottom: 2vh;
         margin-left: 8%;
