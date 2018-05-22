@@ -1,13 +1,13 @@
 
 .sobreMi{
-    @extend %trapecioIzda;
+    @include trapecioIzda;
     @supports (display : grid) {
         grid-area: sobreMi;
     }
     position: relative;
     h2 {
         margin-left: 10%;
-        margin-bottom: 5vh;
+        margin-bottom: 0.8em;
         font-size: $fs-titulos;
     }
     img {
@@ -16,8 +16,8 @@
     p {
         margin-left: 10%;
         margin-right: 5%;
-        margin-top: 5vh;
-        line-height: 6vh;
+        margin-top: 3em;
+        line-height: 2.3em;
         font-size: $fs-p;
     }
 }

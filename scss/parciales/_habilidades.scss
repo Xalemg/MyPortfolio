@@ -1,5 +1,5 @@
 .habilidades {
-    @extend %trapecioDcha;
+    @include trapecioDcha;
     text-align: right;
     @supports (display : grid) {
         grid-area: habilidades;

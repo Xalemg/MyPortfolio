@@ -1,5 +1,5 @@
 .educacion {
-    @extend %trapecioIzda;
+    @include trapecioIzda;
     position: relative;
     @supports (display : grid) {
         grid-area: educacion;
@@ -10,11 +10,12 @@
     }
     ul {
         margin-top: 0;
-        margin-left:11%;
+        margin-left:9%;
+        margin-right:6%;
         padding-left:0; 
         li{
             font-size: 0.9rem;
-            margin:  7.5vh 0;
+            margin:  3.4em 0;
         }
     }
 }

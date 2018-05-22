@@ -66,31 +66,45 @@ h2 {
 @media (min-width: 920px) {
     body .main {
     grid-template-columns: 1fr 18fr 18fr 1fr;
-    grid-template-rows: 90vh 680px 680px 600px auto;
+    grid-template-rows: 90vh 680px 680px 720px auto;
     grid-template-areas:
     "portada portada portada portada"
     "sobreMi sobreMi sobreMi ."
     " . habilidades habilidades habilidades"
-    ". experiencia educacion ."
+    ". educacion experiencia ."
     "contacto contacto contacto contacto";
-    .experiencia, .educacion {
-        margin-top: -20px;
-        background-color: $blanco;
-        color: $azulOscuro;
-    }
+    
     .habilidades {
         background-color: $verdeApagado;
+        margin-top: 30px;
         color: $blanco;
     }
+    .educacion {
+        @include trapecioDcha;
+        li {
+            font-size: 0.9em;
+        }
+    }
     .experiencia {
+        @include trapecioIzda;
         padding-top: 7vh;
-        text-align: left
         h2 {
             margin-bottom: 7.5vh;
         }
+        li {
+            font-size: 0.96em;
+        }
+    
+    }
+    .experiencia, .educacion {
+        margin-top: -70px;
+        box-sizing: content-box;
+        border: 1px solid $blanco;
+        background-color: $blanco;
+        color: $azulOscuro;
     }
     .contacto {
-        margin-top: 100px;
+        margin-top: -140px;
     }
     }
 }

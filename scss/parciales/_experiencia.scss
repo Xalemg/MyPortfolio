@@ -1,5 +1,5 @@
 .experiencia {
-    @extend %trapecioDcha;
+    @include trapecioDcha;
     @supports (display : grid) {
         grid-area: experiencia;
     }

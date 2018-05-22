@@ -16,47 +16,54 @@
             width: 90%;
             input {
                 width:100%;
-                margin: 2vh 0;
+                margin: 1em 0;
             }
             textarea {
                 width: 100%;
-                margin: 3vh 0;
+                margin: 1.5em 0;
             }
         }
         button {
-            margin: 1.6rem 0;
+            margin: 1.6rem auto;
             background-color: #00800D;
             border: none;
             color: $blanco;
             font-size: 1.5em;
-            padding: 0.3em 0.5em;
+            padding: 0.4em 0.5em;
         }
-        @supports (display: grid) {
-        @media (min-width: 700px) {
-                display: grid;
-                grid-template-areas: 
-                "nombre email"
-                "texto texto"
-                " . enviar";
-                grid-template-columns: 45% 45%;
-                grid-column-gap: 50px;
-                margin: 20px;
-                label {
-                    width: 100%;
-                }
-                .nombre {
-                    grid-area: nombre;
-                }
-                .email {
-                    grid-area: email;
-                }
-                .mensaje {
-                    grid-area: texto;
-                }
-                button {
-                    grid-area: enviar;
-                }
-        }
+    }
+}
+@supports (display: grid) {
+    .contacto h2 {
+        margin: 0 15% 50px 14%;
+    }
+    .contacto form {
+    @media (min-width: 700px) {
+            display: grid;
+            grid-template-areas: 
+            "nombre email"
+            "texto texto"
+            " . enviar";
+            grid-template-columns: 45% 45%;
+            margin-left: 15%;
+            margin-right: 14%;
+           
+            label {
+                width: 100%;
+            }
+            .nombre {
+                grid-area: nombre;
+            }
+            .email {
+                grid-area: email;
+            }
+            .mensaje {
+                grid-area: texto;
+            }
+            button {
+                width: 300px;
+                grid-area: enviar;
+            }
         }
     }
 }

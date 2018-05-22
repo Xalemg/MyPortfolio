@@ -297,63 +297,17 @@ template {
   }
 }
 
+@media (min-width: 800px) {
+  html {
+    font-size: 24px;
+  }
+}
+
 /* RGB */
 .portada {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
   float: left;
-}
-
-.sobreMi, .educacion {
-  margin-top: -7vh;
-  margin-bottom: -8vh;
-  padding-top: 7vh;
-  float: left;
-  background-color: #1B487D;
-  width: 97%;
-  height: 110vh;
-  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-}
-
-.sobreMi:after, .educacion:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-@supports (display: grid) {
-  .sobreMi, .educacion {
-    width: 100%;
-    height: 110%;
-    margin-top: 0;
-  }
-}
-
-.habilidades, .experiencia {
-  float: right;
-  padding-top: 7vh;
-  background-color: #FFFFFF;
-  color: #0F3057;
-  width: 97%;
-  height: 110vh;
-  margin-top: -7vh;
-  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
-}
-
-@supports (display: grid) {
-  .habilidades, .experiencia {
-    width: 100%;
-    height: 110%;
-    margin-top: 0;
-  }
-}
-
-.habilidades:after, .experiencia:after {
-  content: '';
-  display: block;
-  clear: both;
 }
 
 .contacto {
@@ -408,7 +362,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 10fr 10fr 1fr;
     grid-template-rows: 90vh 680px 680px 680px 680px auto;
-    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
+    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
   }
 }
 
@@ -454,25 +408,79 @@ ul {
 @media (min-width: 920px) {
   body .main {
     grid-template-columns: 1fr 18fr 18fr 1fr;
-    grid-template-rows: 90vh 680px 680px 600px auto;
-    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". experiencia educacion ." "contacto contacto contacto contacto";
-  }
-  body .main .experiencia, body .main .educacion {
-    margin-top: -20px;
-    background-color: #FFFFFF;
-    color: #0F3057;
+    grid-template-rows: 90vh 680px 680px 720px auto;
+    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". educacion experiencia ." "contacto contacto contacto contacto";
   }
   body .main .habilidades {
     background-color: #1B487D;
+    margin-top: 30px;
     color: #FFFFFF;
   }
-  body .main .experiencia {
+  body .main .educacion {
+    float: right;
     padding-top: 7vh;
-    text-align: left h2;
-    text-align-margin-bottom: 7.5vh;
+    background-color: #FFFFFF;
+    color: #0F3057;
+    width: 97%;
+    height: 110vh;
+    margin-top: -7vh;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
+  }
+  @supports (display: grid) {
+    body .main .educacion {
+      width: 100%;
+      height: 110%;
+      margin-top: 0;
+    }
+  }
+  body .main .educacion:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  body .main .educacion li {
+    font-size: 0.9em;
+  }
+  body .main .experiencia {
+    margin-top: -7vh;
+    margin-bottom: -8vh;
+    padding-top: 7vh;
+    float: left;
+    background-color: #1B487D;
+    width: 97%;
+    height: 110vh;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    padding-top: 7vh;
+  }
+  body .main .experiencia:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  @supports (display: grid) {
+    body .main .experiencia {
+      width: 100%;
+      height: 110%;
+      margin-top: 0;
+    }
+  }
+  body .main .experiencia h2 {
+    margin-bottom: 7.5vh;
+  }
+  body .main .experiencia li {
+    font-size: 0.96em;
+  }
+  body .main .experiencia, body .main .educacion {
+    margin-top: -70px;
+    box-sizing: content-box;
+    border: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+    color: #0F3057;
   }
   body .main .contacto {
-    margin-top: 100px;
+    margin-top: -140px;
   }
 }
 
@@ -642,7 +650,7 @@ nav .tcon-transform + ul {
 }
 
 .portada {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -672,7 +680,30 @@ nav .tcon-transform + ul {
 }
 
 .sobreMi {
+  margin-top: -7vh;
+  margin-bottom: -8vh;
+  padding-top: 7vh;
+  float: left;
+  background-color: #1B487D;
+  width: 97%;
+  height: 110vh;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
   position: relative;
+}
+
+.sobreMi:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+@supports (display: grid) {
+  .sobreMi {
+    width: 100%;
+    height: 110%;
+    margin-top: 0;
+  }
 }
 
 @supports (display: grid) {
@@ -683,7 +714,7 @@ nav .tcon-transform + ul {
 
 .sobreMi h2 {
   margin-left: 10%;
-  margin-bottom: 5vh;
+  margin-bottom: 0.8em;
   font-size: 3.2em;
 }
 
@@ -694,13 +725,36 @@ nav .tcon-transform + ul {
 .sobreMi p {
   margin-left: 10%;
   margin-right: 5%;
-  margin-top: 5vh;
-  line-height: 6vh;
+  margin-top: 3em;
+  line-height: 2.3em;
   font-size: 1, 125em;
 }
 
 .habilidades {
+  float: right;
+  padding-top: 7vh;
+  background-color: #FFFFFF;
+  color: #0F3057;
+  width: 97%;
+  height: 110vh;
+  margin-top: -7vh;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
   text-align: right;
+}
+
+@supports (display: grid) {
+  .habilidades {
+    width: 100%;
+    height: 110%;
+    margin-top: 0;
+  }
+}
+
+.habilidades:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 @supports (display: grid) {
@@ -782,7 +836,30 @@ nav .tcon-transform + ul {
 }
 
 .educacion {
+  margin-top: -7vh;
+  margin-bottom: -8vh;
+  padding-top: 7vh;
+  float: left;
+  background-color: #1B487D;
+  width: 97%;
+  height: 110vh;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
   position: relative;
+}
+
+.educacion:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+@supports (display: grid) {
+  .educacion {
+    width: 100%;
+    height: 110%;
+    margin-top: 0;
+  }
 }
 
 @supports (display: grid) {
@@ -798,18 +875,42 @@ nav .tcon-transform + ul {
 
 .educacion ul {
   margin-top: 0;
-  margin-left: 11%;
+  margin-left: 9%;
+  margin-right: 6%;
   padding-left: 0;
 }
 
 .educacion ul li {
   font-size: 0.9rem;
-  margin: 7.5vh 0;
+  margin: 3.4em 0;
 }
 
 .experiencia {
+  float: right;
+  padding-top: 7vh;
+  background-color: #FFFFFF;
+  color: #0F3057;
+  width: 97%;
+  height: 110vh;
+  margin-top: -7vh;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
   text-align: right;
   padding-top: 12vh;
+}
+
+@supports (display: grid) {
+  .experiencia {
+    width: 100%;
+    height: 110%;
+    margin-top: 0;
+  }
+}
+
+.experiencia:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 @supports (display: grid) {
@@ -853,31 +954,34 @@ nav .tcon-transform + ul {
 
 .contacto form label input {
   width: 100%;
-  margin: 2vh 0;
+  margin: 1em 0;
 }
 
 .contacto form label textarea {
   width: 100%;
-  margin: 3vh 0;
+  margin: 1.5em 0;
 }
 
 .contacto form button {
-  margin: 1.6rem 0;
+  margin: 1.6rem auto;
   background-color: #00800D;
   border: none;
   color: #FFFFFF;
   font-size: 1.5em;
-  padding: 0.3em 0.5em;
+  padding: 0.4em 0.5em;
 }
 
 @supports (display: grid) {
+  .contacto h2 {
+    margin: 0 15% 50px 14%;
+  }
   @media (min-width: 700px) {
     .contacto form {
       display: grid;
-      grid-template-areas: "nombre email" "texto texto" " . enviar";
+      grid-template-areas: "nombre email" "texto texto" " . enviar";
       grid-template-columns: 45% 45%;
-      grid-column-gap: 50px;
-      margin: 20px;
+      margin-left: 15%;
+      margin-right: 14%;
     }
     .contacto form label {
       width: 100%;
@@ -892,6 +996,7 @@ nav .tcon-transform + ul {
       grid-area: texto;
     }
     .contacto form button {
+      width: 300px;
       grid-area: enviar;
     }
   }
