@@ -291,6 +291,12 @@ template {
   display: none;
 }
 
+@media (min-width: 575px) {
+  html {
+    font-size: 20px;
+  }
+}
+
 /* RGB */
 .portada {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
@@ -386,27 +392,23 @@ body {
   font-family: "Open Sans", sans-serif;
   line-height: 1.6;
   color: #FFFFFF;
+  height: 100%;
 }
 
 #myVideo {
   position: fixed;
   right: 0;
-  z-index: -1;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
 }
 
-.main {
-  background-color: rgba(51, 51, 48, 0.466);
-}
-
 @supports (display: grid) {
   .main {
     display: grid;
-    grid-template-columns: 1fr 9fr 9fr 1fr;
-    grid-template-rows: 90vh 110vh 110vh 110vh 100vh 500px;
-    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
+    grid-template-columns: 1fr 10fr 10fr 1fr;
+    grid-template-rows: 90vh 680px 680px 680px 680px auto;
+    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
   }
 }
 
@@ -449,6 +451,31 @@ ul {
   }
 }
 
+@media (min-width: 920px) {
+  body .main {
+    grid-template-columns: 1fr 18fr 18fr 1fr;
+    grid-template-rows: 90vh 680px 680px 600px auto;
+    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". experiencia educacion ." "contacto contacto contacto contacto";
+  }
+  body .main .experiencia, body .main .educacion {
+    margin-top: -20px;
+    background-color: #FFFFFF;
+    color: #0F3057;
+  }
+  body .main .habilidades {
+    background-color: #1B487D;
+    color: #FFFFFF;
+  }
+  body .main .experiencia {
+    padding-top: 7vh;
+    text-align: left h2;
+    text-align-margin-bottom: 7.5vh;
+  }
+  body .main .contacto {
+    margin-top: 100px;
+  }
+}
+
 nav {
   background: #FFFFFF;
   text-align: center;
@@ -476,17 +503,18 @@ nav ul {
   display: table-row;
   position: fixed;
   height: 100vh;
-  width: 100vw;
+  top: 0px;
+  width: 100%;
   left: -101vw;
-  margin: 0;
-  padding: 0;
+  margin: 50px 0;
+  padding: 10% 0;
   text-align: center;
-  font-size: 1em;
-  background-color: rgba(12, 112, 117, 0.507);
+  font-size: 2.5em;
+  background-color: rgba(12, 112, 117, 0.9);
 }
 
 nav ul li {
-  height: 20%;
+  height: 18%;
   display: flex;
   align-items: center;
   align-content: center;
@@ -610,7 +638,6 @@ nav .tcon-visuallyhidden:active, nav .tcon-visuallyhidden:focus {
 }
 
 nav .tcon-transform + ul {
-  top: 0;
   left: 0;
 }
 
@@ -669,7 +696,7 @@ nav .tcon-transform + ul {
   margin-right: 5%;
   margin-top: 5vh;
   line-height: 6vh;
-  font-size: 1,125em;
+  font-size: 1, 125em;
 }
 
 .habilidades {
@@ -698,7 +725,7 @@ nav .tcon-transform + ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  align-content: space-around;
+  align-content: flex-start;
 }
 
 .habilidades .selector .huecoIconos {
@@ -741,11 +768,10 @@ nav .tcon-transform + ul {
 
 .habilidades .grid-iconos {
   width: 90%;
-  background-color: #FFFFFF;
   height: 280px;
   margin: 5vh auto 0 auto;
   display: flex;
-  align-content: space-around;
+  align-content: flex-start;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -836,7 +862,7 @@ nav .tcon-transform + ul {
 }
 
 .contacto form button {
-  margin-top: 1.6rem;
+  margin: 1.6rem 0;
   background-color: #00800D;
   border: none;
   color: #FFFFFF;
@@ -844,9 +870,37 @@ nav .tcon-transform + ul {
   padding: 0.3em 0.5em;
 }
 
+@supports (display: grid) {
+  @media (min-width: 700px) {
+    .contacto form {
+      display: grid;
+      grid-template-areas: "nombre email" "texto texto" " . enviar";
+      grid-template-columns: 45% 45%;
+      grid-column-gap: 50px;
+      margin: 20px;
+    }
+    .contacto form label {
+      width: 100%;
+    }
+    .contacto form .nombre {
+      grid-area: nombre;
+    }
+    .contacto form .email {
+      grid-area: email;
+    }
+    .contacto form .mensaje {
+      grid-area: texto;
+    }
+    .contacto form button {
+      grid-area: enviar;
+    }
+  }
+}
+
 footer {
   padding-top: 60px;
   text-align: center;
+  position: relative;
 }
 
 footer .mensajeResponsive {

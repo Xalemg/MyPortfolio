@@ -24,12 +24,39 @@
             }
         }
         button {
-            margin-top: 1.6rem;
+            margin: 1.6rem 0;
             background-color: #00800D;
             border: none;
             color: $blanco;
             font-size: 1.5em;
             padding: 0.3em 0.5em;
+        }
+        @supports (display: grid) {
+        @media (min-width: 700px) {
+                display: grid;
+                grid-template-areas: 
+                "nombre email"
+                "texto texto"
+                " . enviar";
+                grid-template-columns: 45% 45%;
+                grid-column-gap: 50px;
+                margin: 20px;
+                label {
+                    width: 100%;
+                }
+                .nombre {
+                    grid-area: nombre;
+                }
+                .email {
+                    grid-area: email;
+                }
+                .mensaje {
+                    grid-area: texto;
+                }
+                button {
+                    grid-area: enviar;
+                }
+        }
         }
     }
 }

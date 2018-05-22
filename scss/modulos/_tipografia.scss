@@ -8,7 +8,16 @@ $fw-normal : 400;
 $fw-bold : 900;
 
 $fs-portada : 8.25em;
+$fs-portada__grande: 1.45em;
 $fs-titulos : 3.2em;
-@media (min-width: 800px) {
+$fs-p: 1,125em;
 
+@media (min-width: 575px) {
+    html {
+        font-size: 20px;
+        $fs-titulos : 4.2em;
+    } 
+}
+@media (min-width: 575px) {
+    
 }
