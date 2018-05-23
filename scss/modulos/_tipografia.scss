@@ -20,11 +20,3 @@ $fs-p: 1,125em;
         $fs-portada__grande: 2.45em;
     } 
 }
-@media (min-width: 800px) {
-    html {
-    font-size: 24px;
-    }
-    $fs-titulos : 5.6em;
-    $fs-portada : 12.25em;
-    $fs-portada__grande: 4.45em;
-}

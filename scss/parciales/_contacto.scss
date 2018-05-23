@@ -17,10 +17,14 @@
             input {
                 width:100%;
                 margin: 1em 0;
+                background-color: $blanco;
+                color: black;
             }
             textarea {
                 width: 100%;
+                background-color: $blanco;
                 margin: 1.5em 0;
+                color: black;
             }
         }
         button {

@@ -1,0 +1,118 @@
+@media (min-width: 640px) {
+    nav .menuDropdown {
+        width: 400px;
+        padding: 5vh 0;
+        background-color: $backgroundMenuSolido;
+        font-size: 1.2em;
+    }
+}
+@media (min-width: 800px) {
+    body {
+        font-size: 20px;
+        .main {
+            grid-template-columns: 1fr 360px 360px 1fr;
+        }
+    }
+}
+@media (min-width: 920px) {
+    body .main {
+    grid-template-columns: 1fr 18fr 18fr 1fr;
+    grid-template-rows: 90vh 500px 580px 720px auto;
+    grid-template-areas:
+    "portada portada portada portada"
+    "sobreMi sobreMi sobreMi ."
+    " . habilidades habilidades habilidades"
+    ". educacion experiencia ."
+    "contacto contacto contacto contacto";
+    .sobreMi {
+        display: grid;
+        position: relative;
+        grid-template-areas: 
+        ". titulo"
+        "foto parrafo";
+        grid-template-columns: 2fr 8fr;
+        grid-template-rows: 2fr 8fr;
+        h2 {
+            grid-area: titulo;
+            margin-bottom: 0.8em;
+            margin-left: 5%; 
+         }
+        img {
+            grid-area: foto;
+        position: absolute;
+        right: 0;
+        }
+        p {
+        margin-top: 2%; 
+        grid-area: parrafo;
+        }
+    }
+    .habilidades {
+        background-color: $verdeApagado;
+        margin-top: 30px;
+        color: $blanco;
+        grid-template-columns: 5.5fr 4.5fr;
+        grid-template-rows: 3fr 7fr;
+        display: grid;
+        grid-template-areas:
+        "iconos titulo"
+        "iconos caja";
+        h2 {
+            grid-area: titulo;
+        }
+        .grid-iconos {
+            grid-area: iconos;
+            -webkit-clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
+        clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
+        align-content: center;
+        background-color: $blanco;
+        height: 50%;
+        margin-top: 5%;
+        display: grid;
+        grid-gap: 2%;
+        grid-template-areas: "i i i i" "i i i i";
+        }
+        
+    }
+    .educacion {
+        @include trapecioDcha;
+        li {
+            font-size: 0.9em;
+        }
+    }
+    .experiencia {
+        @include trapecioIzda;
+        padding-top: 7vh;
+        h2 {
+            margin-bottom: 7.5vh;
+        }
+        li {
+            font-size: 0.96em;
+        }
+    }
+    .experiencia, .educacion {
+        margin-top: -70px;
+        box-sizing: content-box;
+        border: 1px solid $blanco;
+        background-color: $blanco;
+        color: $azulOscuro;
+        padding-top: 15%;
+    }
+    .contacto {
+        margin-top: -140px;
+        box-sizing: content-box;
+        border-right:  2px solid $verdeApagado;
+    }
+    }
+}
+@media (min-width: 1200px) {
+    body .main {
+        grid-template-areas:
+    ". portada portada ."
+    ". sobreMi sobreMi ."
+    " . habilidades habilidades ."
+    ". educacion experiencia ."
+    ". contacto contacto .";
+    grid-template-columns: 1fr 570px 570px 1fr;
+}
+}
