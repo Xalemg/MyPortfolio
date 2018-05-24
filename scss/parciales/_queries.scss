@@ -1,6 +1,6 @@
 @media (min-width: 640px) {
     nav .menuDropdown {
-        width: 400px;
+        width: 300px;
         padding: 5vh 0;
         background-color: $backgroundMenuSolido;
         font-size: 1.2em;
@@ -105,14 +105,38 @@
     }
     }
 }
-@media (min-width: 1200px) {
-    body .main {
-        grid-template-areas:
-    ". portada portada ."
-    ". sobreMi sobreMi ."
-    " . habilidades habilidades ."
-    ". educacion experiencia ."
-    ". contacto contacto .";
-    grid-template-columns: 1fr 570px 570px 1fr;
+@media (min-width: 1024px) {
+    body {
+        .main {
+            grid-template-areas:
+            "portada portada portada portada portada portada"
+            ". sobreMi sobreMi sobreMi sobreMi ."
+            ". habilidades habilidades habilidades habilidades ."
+            ". . educacion experiencia . ."
+            ". contacto contacto contacto contacto.";
+            grid-template-columns: 1fr 1fr 487px 487px 1fr 1fr;
+        }
+    }
 }
+
+@media (min-width: 1280px) {
+    body {
+        nav {
+            padding-left: 300px;
+            .tcon {
+                display: none;
+            }
+            .menuDropdown {
+                left: 0;
+                margin-left: 0;
+                padding-left: 0;
+            }
+        }
+        .main {
+            margin-left: 300px;
+        }
+        footer {
+            margin-left: 300px;
+        }
+    }
 }

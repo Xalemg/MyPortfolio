@@ -35,6 +35,7 @@ nav {
         font-size: 2.5em;
         background-color: $backgroundMenu;
         li {
+            display: block;
             a {
                 line-height: 1em;
                 text-decoration: none;
