@@ -356,7 +356,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 10fr 10fr 1fr;
     grid-template-rows: 90vh 680px 680px 680px 680px auto;
-    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
+    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
   }
 }
 
@@ -890,7 +890,7 @@ nav .tcon-transform + ul {
   @media (min-width: 700px) {
     .contacto form {
       display: grid;
-      grid-template-areas: "nombre email" "texto texto" " . enviar";
+      grid-template-areas: "nombre email" "texto texto" " . enviar";
       grid-template-columns: 45% 45%;
       margin-left: 15%;
       margin-right: 14%;
@@ -970,12 +970,12 @@ footer .copyright {
   body .main {
     grid-template-columns: 1fr 18fr 18fr 1fr;
     grid-template-rows: 90vh 500px 580px 720px auto;
-    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". educacion experiencia ." "contacto contacto contacto contacto";
+    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". educacion experiencia ." "contacto contacto contacto contacto";
   }
   body .main .sobreMi {
     display: grid;
     position: relative;
-    grid-template-areas: ". titulo" "foto parrafo";
+    grid-template-areas: ". titulo" "foto parrafo";
     grid-template-columns: 2fr 8fr;
     grid-template-rows: 2fr 8fr;
   }
@@ -1000,7 +1000,7 @@ footer .copyright {
     grid-template-columns: 5.5fr 4.5fr;
     grid-template-rows: 3fr 7fr;
     display: grid;
-    grid-template-areas: "iconos titulo" "iconos caja";
+    grid-template-areas: "iconos titulo" "iconos caja";
   }
   body .main .habilidades h2 {
     grid-area: titulo;
@@ -1090,8 +1090,8 @@ footer .copyright {
 
 @media (min-width: 1024px) {
   body .main {
-    grid-template-areas: "portada portada portada portada portada portada" ". sobreMi sobreMi sobreMi sobreMi ." ". habilidades habilidades habilidades habilidades ." ". . educacion experiencia . ." ". contacto contacto contacto contacto.";
-    grid-template-columns: 1fr 1fr 487px 487px 1fr 1fr;
+    grid-template-areas: "portada portada portada portada portada portada" ". sobreMi sobreMi sobreMi sobreMi ." ". habilidades habilidades habilidades habilidades ." ". . educacion experiencia . ." ". contacto contacto contacto contacto.";
+    grid-template-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
   }
 }
 

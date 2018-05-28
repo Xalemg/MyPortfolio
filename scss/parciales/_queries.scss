@@ -114,7 +114,7 @@
             ". habilidades habilidades habilidades habilidades ."
             ". . educacion experiencia . ."
             ". contacto contacto contacto contacto.";
-            grid-template-columns: 1fr 1fr 487px 487px 1fr 1fr;
+            grid-template-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
         }
     }
 }
