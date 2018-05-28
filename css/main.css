@@ -432,6 +432,7 @@ nav .menuDropdown {
 }
 
 nav .menuDropdown li {
+  cursor: pointer;
   display: block;
 }
 
