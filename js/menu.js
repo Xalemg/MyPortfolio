@@ -1,9 +1,4 @@
-
-/*Control del scroll cuando se abre y se cierra el menu */
-
-/*DESHABILITA EL SCROLL CUANDO SE ABRE EL MENU A PANTALLA COMPLETA */
-
-/*FUNCIONES PARA MANEJAR EL SCROLL DEL MENU */
+/* CIERRA ATOMATICAMENTE EL MENU AL HACER CLICK SOBRE UN ELEMENTO*/
 
 //Sobre mi
 function scrollSobreMi() {

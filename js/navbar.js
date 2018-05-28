@@ -149,7 +149,12 @@ var keys = {37: 1, 38: 1, 39: 1, 40: 1};
     getElementList(elements).forEach(function(element) {
       element.classList.add(_transformClass);
     });
-    disableScroll();
+    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+    console.log(width);
+    if(width<800){
+      console.log("hola");
+      disableScroll();
+    }
     return tcon;
   };
 
@@ -202,6 +207,8 @@ function preventDefaultForScrollKeys(e) {
         return false;
     }
 }
+/*FUNCIONES PARA MANEJAR EL SCROLL DEL MENU */
+
 //Deshabilita el scroll
 function disableScroll() {
   if (window.addEventListener) // older FF
