@@ -18,6 +18,8 @@ body {
 .main {
     @supports (display: grid) {
         display: grid;
+        margin-left: 0;
+        padding-left: 0;
         grid-template-columns: 1fr 10fr 10fr 1fr;
         grid-template-rows: 90vh 680px 680px 680px 680px auto;
         grid-template-areas:
