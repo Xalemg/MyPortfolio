@@ -10,7 +10,7 @@
         padding-right: 10%;
     }
     .selector {
-        background-color: $azulOscuro;
+        background-color: $backgroundMenu;
         width: 90%;
         margin: 0 auto;
         color: $blanco;
@@ -22,11 +22,18 @@
         align-content: flex-start;
         
         .huecoIconos {
-            height: 82px;
-            width: 82px;
+            -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            height: 86px;
+            width: 80px;
+            position: relative;
+            overflow: visible;
             margin: 1em 0;
-            border-radius: 50%;
-            background: gray;
+            background: rgb(235, 235, 235);
+            img {
+                height: 86px;
+                width: 80px;
+            }
         }
         p {
             text-align: right;
@@ -39,14 +46,14 @@
         width: 90%;
         display: block;
         margin: 0 auto;
-        background-color: $azulOscuro;
+        background-color: $backgroundMenu;
         padding-bottom: 5px;
         .nivel {
             background-color: $blanco;
             margin: 0 auto;
             width: 95%;
             height: 16px;
-            border: 2px solid $azulOscuro;
+            border: 2px solid $backgroundMenu;
             .seccion {
                 width: 20%;
                 height: 100%;
@@ -59,14 +66,15 @@
     .grid-iconos {
         width: 90%;
         height: 280px;
-        margin: 5em auto 0 auto;
+        margin: 3em auto 0 auto;
         display: flex;
         align-content: flex-start;
         flex-wrap: wrap;
         justify-content: space-evenly;
         img {
-            height: 82px;
-            width: 82px;
+            height: 86px;
+            margin-bottom: 1em;
+            width: 80px;
         }
 
     }

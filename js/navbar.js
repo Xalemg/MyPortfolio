@@ -152,7 +152,6 @@ var keys = {37: 1, 38: 1, 39: 1, 40: 1};
     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     console.log(width);
     if(width<800){
-      console.log("hola");
       disableScroll();
     }
     return tcon;

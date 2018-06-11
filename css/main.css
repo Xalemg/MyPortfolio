@@ -341,6 +341,7 @@ body {
   line-height: 1.6;
   color: #FFFFFF;
   height: 100%;
+  width: 100%;
 }
 
 #myVideo {
@@ -680,7 +681,7 @@ nav .tcon-transform + ul {
 }
 
 .habilidades .selector {
-  background-color: #0F3057;
+  background-color: rgba(27, 73, 125, 0.89);
   width: 90%;
   margin: 0 auto;
   color: #FFFFFF;
@@ -693,11 +694,19 @@ nav .tcon-transform + ul {
 }
 
 .habilidades .selector .huecoIconos {
-  height: 82px;
-  width: 82px;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  height: 86px;
+  width: 80px;
+  position: relative;
+  overflow: visible;
   margin: 1em 0;
-  border-radius: 50%;
-  background: gray;
+  background: #ebebeb;
+}
+
+.habilidades .selector .huecoIconos img {
+  height: 86px;
+  width: 80px;
 }
 
 .habilidades .selector p {
@@ -711,7 +720,7 @@ nav .tcon-transform + ul {
   width: 90%;
   display: block;
   margin: 0 auto;
-  background-color: #0F3057;
+  background-color: rgba(27, 73, 125, 0.89);
   padding-bottom: 5px;
 }
 
@@ -720,7 +729,7 @@ nav .tcon-transform + ul {
   margin: 0 auto;
   width: 95%;
   height: 16px;
-  border: 2px solid #0F3057;
+  border: 2px solid rgba(27, 73, 125, 0.89);
 }
 
 .habilidades .medidorHabilidad .nivel .seccion {
@@ -733,7 +742,7 @@ nav .tcon-transform + ul {
 .habilidades .grid-iconos {
   width: 90%;
   height: 280px;
-  margin: 5em auto 0 auto;
+  margin: 3em auto 0 auto;
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
@@ -741,8 +750,9 @@ nav .tcon-transform + ul {
 }
 
 .habilidades .grid-iconos img {
-  height: 82px;
-  width: 82px;
+  height: 86px;
+  margin-bottom: 1em;
+  width: 80px;
 }
 
 .educacion {
@@ -1001,12 +1011,13 @@ footer .copyright {
     margin-top: 30px;
     color: #FFFFFF;
     grid-template-columns: 5.5fr 4.5fr;
-    grid-template-rows: 3fr 7fr;
+    grid-template-rows: 3fr 9fr;
     display: grid;
     grid-template-areas: "iconos titulo" "iconos caja";
   }
   body .main .habilidades h2 {
     grid-area: titulo;
+    margin-bottom: 0;
   }
   body .main .habilidades .grid-iconos {
     grid-area: iconos;
@@ -1016,9 +1027,22 @@ footer .copyright {
     background-color: #FFFFFF;
     height: 50%;
     margin-top: 5%;
+    grid-row-gap: 1em;
     display: grid;
-    grid-gap: 2%;
     grid-template-areas: "i i i i" "i i i i";
+  }
+  body .main .habilidades .grid-iconos img {
+    width: 90px;
+    margin: 0;
+    height: 100px;
+  }
+  body .main .habilidades .huecoIconos {
+    width: 90px;
+    height: 100px;
+  }
+  body .main .habilidades .huecoIconos img {
+    width: 90px;
+    height: 100px;
   }
   body .main .educacion {
     float: right;
@@ -1031,6 +1055,7 @@ footer .copyright {
     -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
     margin-left: 0;
+    border-right: 1px solid #FFFFFF;
   }
   @supports (display: grid) {
     body .main .educacion {
@@ -1080,7 +1105,6 @@ footer .copyright {
   body .main .experiencia, body .main .educacion {
     margin-top: -70px;
     box-sizing: content-box;
-    border: 1px solid #FFFFFF;
     background-color: #FFFFFF;
     color: #0F3057;
     padding-top: 15%;
