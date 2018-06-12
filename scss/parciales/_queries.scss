@@ -65,20 +65,20 @@
         .grid-iconos {
             grid-area: iconos;
             -webkit-clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
-        clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
-        align-content: center;
-        background-color: $blanco;
-        height: 50%;
-        margin-top: 5%;
-        grid-row-gap: 1em;
-        display: grid;
-        grid-template-areas: "i i i i" "i i i i";
-        img {
-            width: 90px;
-            margin: 0;
-            height: 100px;
+            clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
+            align-content: center;
+            background-color: $blanco;
+            height: 50%;
+            margin-top: 5%;
+            grid-row-gap: 1em;
+            display: grid;
+            grid-template-areas: "i i i i" "i i i i";
+            img {
+                width: 90px;
+                margin: 0;
+                height: 100px;
+                }
             }
-        }
         .huecoIconos {
             width: 90px;
             height: 100px;
@@ -93,7 +93,7 @@
     .educacion {
         @include trapecioDcha;
         margin-left: 0;
-        border-right: 1px solid $blanco;
+        
         li {
             font-size: 0.9em;
         }
@@ -101,6 +101,8 @@
     .experiencia {
         @include trapecioIzda;
         padding-top: 7vh;
+        border-left: 1px solid white;
+        margin-left:-1px;
         h2 {
             margin-bottom: 7.5vh;
         }
@@ -118,7 +120,6 @@
     .contacto {
         margin-top: -140px;
         box-sizing: content-box;
-        border-right:  2px solid $verdeApagado;
     }
     }
 }

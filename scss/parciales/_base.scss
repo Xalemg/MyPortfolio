@@ -17,6 +17,7 @@ body {
     min-height: 100%;
 }
 .main {
+    overflow: hidden;
     @supports (display: grid) {
         display: grid;
         margin-left: 0;

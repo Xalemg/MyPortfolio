@@ -63,9 +63,16 @@
             }
             .mensaje {
                 grid-area: texto;
+                font-size: 0.8em;
+               textarea {
+                   resize: none;
+                   height: 8em;
+                   padding-bottom: 0.3em;
+               }
             }
             button {
                 width: 300px;
+                cursor: pointer;
                 grid-area: enviar;
             }
         }

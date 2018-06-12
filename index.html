@@ -49,7 +49,7 @@
             <h2>Habilidades</h2>
             <div class="habilidad">
                 <div class="selector">
-                    <div class="huecoIconos"><img class="icono-Elejido" src="" alt=""></div>
+                    <div class="huecoIconos"><img id="icono-Elejido" src="" alt=""></div>
                     <p>Pulsa un icono para ver más información.</p>
                 </div>
                 <div class="medidorHabilidad">
@@ -58,15 +58,15 @@
                     </div>
                 </div>
             </div>
-            <div class="grid-iconos">
-                <img src="img/php-hex.png" alt="Php">
-                <img src="img/css-hex.png" alt="Css">
-                <img src="img/sass-hex.png" alt="Sass">
-                <img src="img/java-hex.png" alt="Java">
-                <img src="img/unity-hex.png" alt="Unity">
-                <img src="img/cSharp-hex.png" alt="C#">
-                <img src="img/android-hex.png" alt="Android">
-                <img src="img/js-hex.png" alt="Javascript">
+            <div class="grid-iconos" id="icons">
+                <img src="img/php-hex.png" id="php" alt="Php">
+                <img src="img/css-hex.png" id="css" alt="Css">
+                <img src="img/sass-hex.png" id="sass" alt="Sass">
+                <img src="img/java-hex.png" id="java" alt="Java">
+                <img src="img/unity-hex.png" id="unity" alt="Unity">
+                <img src="img/cSharp-hex.png" id="cSharp" alt="C#">
+                <img src="img/android-hex.png" id="android" alt="Android">
+                <img src="img/js-hex.png" id="js" alt="Javascript">
             </div>
         </section>
         <section class="educacion">
@@ -115,8 +115,7 @@
     </footer>
     <script src="js/navbar.js"></script>
     <script src="js/menu.js"></script>
-    <script>
-    transformicons.add('.tcon');
-</script>
+    <script>transformicons.add('.tcon');</script>
+    <script src="js/iconos-habilidades.js"></script>
 </body>
 </html>
