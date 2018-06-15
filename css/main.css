@@ -311,6 +311,7 @@ template {
   padding-top: 7%;
   padding-bottom: 7vh;
   float: left;
+  position: relative;
   background-color: #0F3057;
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
   clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
@@ -784,6 +785,17 @@ template {
   }
 }
 
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -806,7 +818,7 @@ body {
 }
 
 .main {
-  overflow: hidden;
+  position: relative;
 }
 
 @supports (display: grid) {
@@ -815,7 +827,7 @@ body {
     margin-left: 0;
     padding-left: 0;
     grid-template-columns: 1fr 10fr 10fr 1fr;
-    grid-template-rows: 90vh 680px 680px 680px 680px auto;
+    grid-template-rows: 100vh 680px 680px 680px 680px auto;
     grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
   }
 }
@@ -832,7 +844,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  color: #0F3057;
+  color: #0f3057;
   font-size: 3.375em;
   font-weight: 900;
   line-height: 1;
@@ -848,6 +860,12 @@ h2 {
 
 ul {
   list-style-type: none;
+}
+
+.clearfix {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 nav {
@@ -891,15 +909,50 @@ nav .menuDropdown {
   background-color: rgba(27, 73, 125, 0.89);
 }
 
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 nav .menuDropdown li {
   cursor: pointer;
   display: block;
+  position: relative;
 }
 
-nav .menuDropdown li a {
-  line-height: 1em;
-  text-decoration: none;
-  color: #FFFFFF;
+nav .menuDropdown li:after {
+  content: "";
+  width: 0%;
+  bottom: -10%;
+  height: 3px;
+  background-color: #0F3057;
+  left: 20%;
+}
+
+nav .menuDropdown li:hover::after {
+  width: 60%;
+  position: absolute;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  animation-duration: 0.250s;
+  animation-timing-function: ease-out;
 }
 
 nav .tcon {
@@ -1051,6 +1104,7 @@ nav .tcon-transform + ul {
   margin-top: -7vh;
   margin-bottom: -8vh;
   padding-top: 7vh;
+  position: relative;
   float: left;
   background-color: #0F3057;
   width: 97%;
@@ -1100,9 +1154,10 @@ nav .tcon-transform + ul {
 
 .habilidades {
   float: right;
+  position: relative;
   padding-top: 7vh;
   background-color: #FFFFFF;
-  color: #0F3057;
+  color: #0f3057;
   width: 97%;
   height: 110vh;
   margin-top: -7vh;
@@ -1142,14 +1197,26 @@ nav .tcon-transform + ul {
   background-color: #1b487d;
   width: 90%;
   margin: 0 auto;
-  overflow: visible;
   color: #FFFFFF;
   padding-left: 2%;
-  padding-right: 2%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  text-align: left;
   align-content: flex-start;
+}
+
+.habilidades .selector .text {
+  width: 100%;
+}
+
+.habilidades .selector .text h3 {
+  margin-top: 0.5em;
+  visibility: visible;
+  position: absolute;
+}
+
+.habilidades .selector .text p {
+  margin-top: 2.5em;
+  margin-bottom: 0;
 }
 
 .habilidades .selector .huecoIconos {
@@ -1159,20 +1226,13 @@ nav .tcon-transform + ul {
   width: 80px;
   position: relative;
   overflow: visible;
-  margin: 1em 0;
+  margin: 1em 1em 1em 0;
   background: #ebebeb;
 }
 
 .habilidades .selector .huecoIconos img {
   height: 86px;
   width: 80px;
-}
-
-.habilidades .selector p {
-  text-align: right;
-  width: 70%;
-  height: 50px;
-  font-size: 1em;
 }
 
 .habilidades .medidorHabilidad {
@@ -1196,6 +1256,7 @@ nav .tcon-transform + ul {
   width: 0%;
   height: 100%;
   border: 2px solid #FFFFFF;
+  position: relative;
   background-color: #206622;
   -webkit-transition: all 2s ease-out;
   transition: all 2s  ease-out;
@@ -1225,6 +1286,7 @@ nav .tcon-transform + ul {
   margin-top: -7vh;
   margin-bottom: -8vh;
   padding-top: 7vh;
+  position: relative;
   float: left;
   background-color: #0F3057;
   width: 97%;
@@ -1273,9 +1335,10 @@ nav .tcon-transform + ul {
 
 .experiencia {
   float: right;
+  position: relative;
   padding-top: 7vh;
   background-color: #FFFFFF;
-  color: #0F3057;
+  color: #0f3057;
   width: 97%;
   height: 110vh;
   margin-top: -7vh;
@@ -1403,6 +1466,8 @@ footer {
   padding-top: 60px;
   text-align: center;
   position: relative;
+  background-color: rgba(21, 14, 44, 0.233);
+  margin-top: 0;
 }
 
 footer .mensajeResponsive {
@@ -1440,6 +1505,12 @@ footer .copyright {
     background-color: #1b487d;
     font-size: 1.2em;
   }
+  .habilidades .text {
+    margin-top: 10px;
+  }
+  .main {
+    margin-left: 0px;
+  }
 }
 
 @media (min-width: 800px) {
@@ -1455,7 +1526,7 @@ footer .copyright {
   body .main {
     overflow: hidden;
     grid-template-columns: 1fr 18fr 18fr 1fr;
-    grid-template-rows: 90vh 500px 580px 720px 580px;
+    grid-template-rows: 100vh 500px 580px 720px 580px;
     grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". educacion experiencia ." "contacto contacto contacto contacto";
   }
   body .main .sobreMi {
@@ -1516,9 +1587,10 @@ footer .copyright {
   }
   body .main .educacion {
     float: right;
+    position: relative;
     padding-top: 7vh;
     background-color: #FFFFFF;
-    color: #0F3057;
+    color: #0f3057;
     width: 97%;
     height: 110vh;
     margin-top: -7vh;
@@ -1545,6 +1617,7 @@ footer .copyright {
     margin-top: -7vh;
     margin-bottom: -8vh;
     padding-top: 7vh;
+    position: relative;
     float: left;
     background-color: #0F3057;
     width: 97%;
@@ -1577,7 +1650,7 @@ footer .copyright {
     margin-top: -70px;
     box-sizing: content-box;
     background-color: #FFFFFF;
-    color: #0F3057;
+    color: #0f3057;
     padding-top: 15%;
   }
   body .main .contacto {
@@ -1604,6 +1677,7 @@ footer .copyright {
     left: 0;
     margin-left: 0;
     padding-left: 0;
+    border-right: 5px solid #091e38;
   }
   body .main {
     margin-left: 300px;

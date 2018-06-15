@@ -14,15 +14,23 @@
         background-color: $backgroundMenuSolido;
         width: 90%;
         margin: 0 auto;
-        overflow: visible;
         color: $blanco;
         padding-left: 2%;
-        padding-right: 2%;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        text-align: left;
         align-content: flex-start;
-        
+        .text {
+            width: 100%;
+            h3 {
+                margin-top: 0.5em;
+                visibility: visible;
+                position: absolute;
+            }
+            p {
+                margin-top: 2.5em;
+                margin-bottom: 0;
+            }
+        }   
         .huecoIconos {
             -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -30,18 +38,12 @@
             width: 80px;
             position: relative;
             overflow: visible;
-            margin: 1em 0;
+            margin: 1em 1em 1em 0;
             background: rgb(235, 235, 235);
             img {
                 height: 86px;
                 width: 80px;
             }
-        }
-        p {
-            text-align: right;
-            width: 70%;
-            height: 50px;
-            font-size: 1em;
         }
     }
     .medidorHabilidad {
@@ -61,6 +63,7 @@
                 width: 0%;
                 height: 100%;
                 border: 2px solid $blanco;
+                position: relative;
                 background-color: #206622;
                 -webkit-transition: all 2s ease-out;
                 transition: all 2s  ease-out;

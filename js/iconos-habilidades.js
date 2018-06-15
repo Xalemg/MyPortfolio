@@ -95,7 +95,6 @@ function changeDescription(nombre, description){
     let pageDesc = document.getElementById("descripcion");
     pageTittle.innerHTML = nombre;
     pageDesc.innerHTML = description;
-    pageTittle.style.marginLeft = "0.2em";
     pageTittle.style.marginRight = "0.6em";
     
 }

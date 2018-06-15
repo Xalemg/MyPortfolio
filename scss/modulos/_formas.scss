@@ -7,6 +7,7 @@
     margin-top: -7vh;
     margin-bottom: -8vh;
     padding-top: 7vh;
+    position: relative;
     float: left;
     background-color: $verdeApagado;
     width: 97%;
@@ -27,6 +28,7 @@
 
 @mixin trapecioDcha {    
     float: right;
+    position: relative;
     padding-top: 7vh;
     background-color: $blanco;
     color: $azulOscuro;
@@ -53,6 +55,7 @@
     padding-top: 7%;
     padding-bottom: 7vh;
     float: left;
+    position: relative;
     background-color: $verdeApagado;
     -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);

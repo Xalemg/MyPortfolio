@@ -34,14 +34,50 @@ nav {
         justify-content: space-around;
         font-size: 2.5em;
         background-color: $backgroundMenu;
+        @keyframes zoomIn {
+            from {
+              opacity: 0;
+              -webkit-transform: scale3d(0.3, 0.3, 0.3);
+              transform: scale3d(0.3, 0.3, 0.3);
+            }
+          
+            50% {
+              opacity: 1;
+            }
+          }
+          
+          @-webkit-keyframes zoomIn {
+            from {
+              opacity: 0;
+              -webkit-transform: scale3d(0.3, 0.3, 0.3);
+              transform: scale3d(0.3, 0.3, 0.3);
+            }
+          
+            50% {
+              opacity: 1;
+            }
+          }
         li {
             cursor: pointer;
             display: block;
-            a {
-                line-height: 1em;
-                text-decoration: none;
-                color: $blanco;
+            position: relative;
+            &:after {
+                content: "";
+                width: 0%;
+                bottom: -10%;
+                height: 3px;
+                background-color: $verdeApagado;
+                left: 20%;
+                
             }
+        }
+        li:hover::after {
+            width: 60%;
+            position: absolute;
+            -webkit-animation-name: zoomIn;
+            animation-name: zoomIn;
+            animation-duration: 0.250s;
+            animation-timing-function: ease-out;
         }
     }
     @import 'animacionMenu';

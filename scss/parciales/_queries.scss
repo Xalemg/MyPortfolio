@@ -5,6 +5,12 @@
         background-color: $backgroundMenuSolido;
         font-size: 1.2em;
     }
+    .habilidades .text {
+        margin-top: 10px;
+    }
+    .main {
+        margin-left: 0px;
+    }
 }
 @media (min-width: 800px) {
     body {
@@ -18,7 +24,7 @@
     body .main {
     overflow: hidden;
     grid-template-columns: 1fr 18fr 18fr 1fr;
-    grid-template-rows: 90vh 500px 580px 720px 580px;
+    grid-template-rows: 100vh 500px 580px 720px 580px;
     grid-template-areas:
     "portada portada portada portada"
     "sobreMi sobreMi sobreMi ."
@@ -144,6 +150,7 @@
                 left: 0;
                 margin-left: 0;
                 padding-left: 0;
+                border-right: 5px solid $bordeAzul;
             }
         }
         .main {
