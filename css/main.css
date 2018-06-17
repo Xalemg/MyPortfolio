@@ -312,7 +312,7 @@ template {
   padding-bottom: 7vh;
   float: left;
   position: relative;
-  background-color: #0F3057;
+  background-color: #0f3464;
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
   clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
 }
@@ -322,7 +322,6 @@ template {
     padding-top: 5rem;
     margin-top: -25vh;
     padding-bottom: 0;
-    height: auto;
   }
 }
 
@@ -825,10 +824,11 @@ body {
   .main {
     display: grid;
     margin-left: 0;
+    height: 100%;
     padding-left: 0;
     grid-template-columns: 1fr 10fr 10fr 1fr;
     grid-template-rows: 100vh 680px 680px 680px 680px auto;
-    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
+    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
   }
 }
 
@@ -844,7 +844,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  color: #0f3057;
+  color: #02387a;
   font-size: 3.375em;
   font-weight: 900;
   line-height: 1;
@@ -906,7 +906,7 @@ nav .menuDropdown {
   text-align: center;
   justify-content: space-around;
   font-size: 2.5em;
-  background-color: rgba(27, 73, 125, 0.89);
+  background-color: rgba(48, 27, 125, 0.89);
 }
 
 @keyframes zoomIn {
@@ -942,7 +942,7 @@ nav .menuDropdown li:after {
   width: 0%;
   bottom: -10%;
   height: 3px;
-  background-color: #0F3057;
+  background-color: #0f3464;
   left: 20%;
 }
 
@@ -1106,7 +1106,7 @@ nav .tcon-transform + ul {
   padding-top: 7vh;
   position: relative;
   float: left;
-  background-color: #0F3057;
+  background-color: #0f3464;
   width: 97%;
   height: 110vh;
   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
@@ -1157,7 +1157,7 @@ nav .tcon-transform + ul {
   position: relative;
   padding-top: 7vh;
   background-color: #FFFFFF;
-  color: #0f3057;
+  color: #02387a;
   width: 97%;
   height: 110vh;
   margin-top: -7vh;
@@ -1288,7 +1288,7 @@ nav .tcon-transform + ul {
   padding-top: 7vh;
   position: relative;
   float: left;
-  background-color: #0F3057;
+  background-color: #0f3464;
   width: 97%;
   height: 110vh;
   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
@@ -1338,7 +1338,7 @@ nav .tcon-transform + ul {
   position: relative;
   padding-top: 7vh;
   background-color: #FFFFFF;
-  color: #0f3057;
+  color: #02387a;
   width: 97%;
   height: 110vh;
   margin-top: -7vh;
@@ -1431,7 +1431,7 @@ nav .tcon-transform + ul {
   @media (min-width: 700px) {
     .contacto form {
       display: grid;
-      grid-template-areas: "nombre email" "texto texto" " . enviar";
+      grid-template-areas: "nombre email" "texto texto" " . enviar";
       grid-template-columns: 45% 45%;
       margin-left: 15%;
       margin-right: 14%;
@@ -1466,8 +1466,10 @@ footer {
   padding-top: 60px;
   text-align: center;
   position: relative;
+  bottom: 0;
   background-color: rgba(21, 14, 44, 0.233);
   margin-top: 0;
+  padding-bottom: 30px;
 }
 
 footer .mensajeResponsive {
@@ -1496,6 +1498,7 @@ footer .iconosRedes .linkedin {
 
 footer .copyright {
   font-size: 0.5em;
+  margin-bottom: 0;
 }
 
 @media (min-width: 640px) {
@@ -1527,12 +1530,12 @@ footer .copyright {
     overflow: hidden;
     grid-template-columns: 1fr 18fr 18fr 1fr;
     grid-template-rows: 100vh 500px 580px 720px 580px;
-    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". educacion experiencia ." "contacto contacto contacto contacto";
+    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". educacion experiencia ." "contacto contacto contacto contacto";
   }
   body .main .sobreMi {
     display: grid;
     position: relative;
-    grid-template-areas: ". titulo" "foto parrafo";
+    grid-template-areas: ". titulo" "foto parrafo";
     grid-template-columns: 2fr 8fr;
     grid-template-rows: 2fr 8fr;
   }
@@ -1551,13 +1554,13 @@ footer .copyright {
     grid-area: parrafo;
   }
   body .main .habilidades {
-    background-color: #0F3057;
+    background-color: #0f3464;
     margin-top: 30px;
     color: #FFFFFF;
     grid-template-columns: 5.5fr 4.5fr;
     grid-template-rows: 3fr 9fr;
     display: grid;
-    grid-template-areas: "iconos titulo" "iconos caja";
+    grid-template-areas: "iconos titulo" "iconos caja";
   }
   body .main .habilidades h2 {
     grid-area: titulo;
@@ -1590,7 +1593,7 @@ footer .copyright {
     position: relative;
     padding-top: 7vh;
     background-color: #FFFFFF;
-    color: #0f3057;
+    color: #02387a;
     width: 97%;
     height: 110vh;
     margin-top: -7vh;
@@ -1619,7 +1622,7 @@ footer .copyright {
     padding-top: 7vh;
     position: relative;
     float: left;
-    background-color: #0F3057;
+    background-color: #0f3464;
     width: 97%;
     height: 110vh;
     -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
@@ -1650,18 +1653,20 @@ footer .copyright {
     margin-top: -70px;
     box-sizing: content-box;
     background-color: #FFFFFF;
-    color: #0f3057;
+    color: #02387a;
     padding-top: 15%;
   }
   body .main .contacto {
     margin-top: -140px;
     box-sizing: content-box;
+    overflow: hidden;
+    height: 620px;
   }
 }
 
 @media (min-width: 1024px) {
   body .main {
-    grid-template-areas: "portada portada portada portada portada portada" ". sobreMi sobreMi sobreMi sobreMi ." ". habilidades habilidades habilidades habilidades ." ". . educacion experiencia . ." ". contacto contacto contacto contacto.";
+    grid-template-areas: "portada portada portada portada portada portada" ". sobreMi sobreMi sobreMi sobreMi ." ". habilidades habilidades habilidades habilidades ." ". . educacion experiencia . ." ". contacto contacto contacto contacto.";
     grid-template-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
   }
 }
@@ -1683,6 +1688,7 @@ footer .copyright {
     margin-left: 300px;
   }
   body footer {
+    padding-top: 140px;
     margin-left: 300px;
   }
 }

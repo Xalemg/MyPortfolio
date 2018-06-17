@@ -21,6 +21,7 @@ body {
     @supports (display: grid) {
         display: grid;
         margin-left: 0;
+        height: 100%;
         padding-left: 0;
         grid-template-columns: 1fr 10fr 10fr 1fr;
         grid-template-rows: 100vh 680px 680px 680px 680px auto;

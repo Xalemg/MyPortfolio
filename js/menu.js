@@ -40,7 +40,7 @@ function scrollExperiencia() {
 function scrollContacto() {
     closeMenu();
     var elem = document.getElementsByClassName("contacto")[0];
-    elem.scrollIntoView({block: "start", behavior: "smooth"});
+    elem.scrollIntoView({ block: "start", behavior: "smooth"});
 }
 function downloadCV() {
     closeMenu();
