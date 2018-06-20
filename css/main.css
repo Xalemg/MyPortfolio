@@ -828,7 +828,7 @@ body {
     padding-left: 0;
     grid-template-columns: 1fr 10fr 10fr 1fr;
     grid-template-rows: 100vh 680px 680px 680px 680px auto;
-    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
+    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
   }
 }
 
@@ -906,7 +906,7 @@ nav .menuDropdown {
   text-align: center;
   justify-content: space-around;
   font-size: 2.5em;
-  background-color: rgba(48, 27, 125, 0.89);
+  background-color: rgba(15, 52, 100, 0.911);
 }
 
 @keyframes zoomIn {
@@ -942,7 +942,7 @@ nav .menuDropdown li:after {
   width: 0%;
   bottom: -10%;
   height: 3px;
-  background-color: #0f3464;
+  background-color: #FFFFFF;
   left: 20%;
 }
 
@@ -1227,7 +1227,6 @@ nav .tcon-transform + ul {
   position: relative;
   overflow: visible;
   margin: 1em 1em 1em 0;
-  background: #ebebeb;
 }
 
 .habilidades .selector .huecoIconos img {
@@ -1431,12 +1430,15 @@ nav .tcon-transform + ul {
   @media (min-width: 700px) {
     .contacto form {
       display: grid;
-      grid-template-areas: "nombre email" "texto texto" " . enviar";
+      grid-template-areas: "nombre email" "texto texto" " enviar enviar";
       grid-template-columns: 45% 45%;
       margin-left: 15%;
       margin-right: 14%;
     }
     .contacto form label {
+      width: 100%;
+    }
+    .contacto form label input {
       width: 100%;
     }
     .contacto form .nombre {
@@ -1524,149 +1526,153 @@ footer .copyright {
   }
 }
 
-@media (min-width: 920px) {
-  body .main {
-    overflow: hidden;
-    grid-template-columns: 1fr 18fr 18fr 1fr;
-    grid-template-rows: 100vh 500px 580px 720px 580px;
-    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". educacion experiencia ." "contacto contacto contacto contacto";
-  }
-  body .main .sobreMi {
-    display: grid;
-    position: relative;
-    grid-template-areas: ". titulo" "foto parrafo";
-    grid-template-columns: 2fr 8fr;
-    grid-template-rows: 2fr 8fr;
-  }
-  body .main .sobreMi h2 {
-    grid-area: titulo;
-    margin-bottom: 0.8em;
-    margin-left: 5%;
-  }
-  body .main .sobreMi img {
-    grid-area: foto;
-    position: absolute;
-    right: 0;
-  }
-  body .main .sobreMi p {
-    margin-top: 2%;
-    grid-area: parrafo;
-  }
-  body .main .habilidades {
-    background-color: #0f3464;
-    margin-top: 30px;
-    color: #FFFFFF;
-    grid-template-columns: 5.5fr 4.5fr;
-    grid-template-rows: 3fr 9fr;
-    display: grid;
-    grid-template-areas: "iconos titulo" "iconos caja";
-  }
-  body .main .habilidades h2 {
-    grid-area: titulo;
-    margin-bottom: 0;
-  }
-  body .main .habilidades .grid-iconos {
-    grid-area: iconos;
-    -webkit-clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
-    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
-    align-content: center;
-    background-color: #FFFFFF;
-    height: 50%;
-    margin-top: 5%;
-    grid-row-gap: 1em;
-    display: grid;
-    grid-template-areas: "i i i i" "i i i i";
-  }
-  body .main .habilidades .grid-iconos img {
-    width: 90px;
-    margin: 0;
-    height: 100px;
-  }
-  body .main .habilidades .huecoIconos {
-    width: 90px;
-    height: 100px;
-    margin: 1em 1em;
-  }
-  body .main .educacion {
-    float: right;
-    position: relative;
-    padding-top: 7vh;
-    background-color: #FFFFFF;
-    color: #02387a;
-    width: 97%;
-    height: 110vh;
-    margin-top: -7vh;
-    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
-    margin-left: 0;
-  }
-  @supports (display: grid) {
+@supports (display: grid) {
+  @media (min-width: 920px) {
+    nav h1 {
+      margin-right: 150px;
+    }
+    body .main {
+      overflow: hidden;
+      grid-template-columns: 1fr 18fr 18fr 1fr;
+      grid-template-rows: 100vh 500px 580px 720px 580px;
+      grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". educacion experiencia ." "contacto contacto contacto contacto";
+    }
+    body .main .sobreMi {
+      display: grid;
+      position: relative;
+      grid-template-areas: ". titulo" "foto parrafo";
+      grid-template-columns: 2fr 8fr;
+      grid-template-rows: 2fr 8fr;
+    }
+    body .main .sobreMi h2 {
+      grid-area: titulo;
+      margin-bottom: 0.8em;
+      margin-left: 5%;
+    }
+    body .main .sobreMi img {
+      grid-area: foto;
+      position: absolute;
+      right: 0;
+    }
+    body .main .sobreMi p {
+      margin-top: 2%;
+      grid-area: parrafo;
+    }
+    body .main .habilidades {
+      background-color: #0f3464;
+      margin-top: 30px;
+      color: #FFFFFF;
+      grid-template-columns: 5.5fr 4.5fr;
+      grid-template-rows: 3fr 9fr;
+      display: grid;
+      grid-template-areas: "iconos titulo" "iconos caja";
+    }
+    body .main .habilidades h2 {
+      grid-area: titulo;
+      margin-bottom: 0;
+    }
+    body .main .habilidades .grid-iconos {
+      grid-area: iconos;
+      -webkit-clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
+      clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
+      align-content: center;
+      background-color: #FFFFFF;
+      height: 50%;
+      margin-top: 5%;
+      grid-row-gap: 1em;
+      display: grid;
+      grid-template-areas: "i i i i" "i i i i";
+    }
+    body .main .habilidades .grid-iconos img {
+      width: 90px;
+      margin: 0;
+      height: 100px;
+    }
+    body .main .habilidades .huecoIconos {
+      width: 90px;
+      height: 100px;
+      margin: 1em 1em;
+    }
     body .main .educacion {
-      width: 100%;
-      height: 110%;
-      margin-top: 0;
+      float: right;
+      position: relative;
+      padding-top: 7vh;
+      background-color: #FFFFFF;
+      color: #02387a;
+      width: 97%;
+      height: 110vh;
+      margin-top: -7vh;
+      -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+      clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
+      margin-left: 0;
     }
-  }
-  body .main .educacion:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-  body .main .educacion li {
-    font-size: 0.9em;
-  }
-  body .main .experiencia {
-    margin-top: -7vh;
-    margin-bottom: -8vh;
-    padding-top: 7vh;
-    position: relative;
-    float: left;
-    background-color: #0f3464;
-    width: 97%;
-    height: 110vh;
-    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-    padding-top: 7vh;
-    border-left: 1px solid white;
-    margin-left: -1px;
-  }
-  body .main .experiencia:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-  @supports (display: grid) {
+    @supports (display: grid) {
+      body .main .educacion {
+        width: 100%;
+        height: 110%;
+        margin-top: 0;
+      }
+    }
+    body .main .educacion:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    body .main .educacion li {
+      font-size: 0.9em;
+    }
     body .main .experiencia {
-      width: 100%;
-      height: 110%;
-      margin-top: 0;
+      margin-top: -7vh;
+      margin-bottom: -8vh;
+      padding-top: 7vh;
+      position: relative;
+      float: left;
+      background-color: #0f3464;
+      width: 97%;
+      height: 110vh;
+      -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+      clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+      padding-top: 7vh;
+      border-left: 1px solid white;
+      margin-left: -1px;
+    }
+    body .main .experiencia:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    @supports (display: grid) {
+      body .main .experiencia {
+        width: 100%;
+        height: 110%;
+        margin-top: 0;
+      }
+    }
+    body .main .experiencia h2 {
+      margin-bottom: 7.5vh;
+    }
+    body .main .experiencia li {
+      font-size: 0.96em;
+    }
+    body .main .experiencia, body .main .educacion {
+      margin-top: -70px;
+      box-sizing: content-box;
+      background-color: #FFFFFF;
+      color: #02387a;
+      padding-top: 15%;
+    }
+    body .main .contacto {
+      margin-top: -140px;
+      box-sizing: content-box;
+      overflow: hidden;
+      height: 620px;
     }
   }
-  body .main .experiencia h2 {
-    margin-bottom: 7.5vh;
-  }
-  body .main .experiencia li {
-    font-size: 0.96em;
-  }
-  body .main .experiencia, body .main .educacion {
-    margin-top: -70px;
-    box-sizing: content-box;
-    background-color: #FFFFFF;
-    color: #02387a;
-    padding-top: 15%;
-  }
-  body .main .contacto {
-    margin-top: -140px;
-    box-sizing: content-box;
-    overflow: hidden;
-    height: 620px;
-  }
-}
-
-@media (min-width: 1024px) {
-  body .main {
-    grid-template-areas: "portada portada portada portada portada portada" ". sobreMi sobreMi sobreMi sobreMi ." ". habilidades habilidades habilidades habilidades ." ". . educacion experiencia . ." ". contacto contacto contacto contacto.";
-    grid-template-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
+  @media (min-width: 1024px) {
+    body .main {
+      grid-template-areas: "portada portada portada portada portada portada" ". sobreMi sobreMi sobreMi sobreMi ." ". habilidades habilidades habilidades habilidades ." ". . educacion experiencia . ." ". contacto contacto contacto contacto.";
+      grid-template-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
+    }
   }
 }
 

@@ -20,147 +20,151 @@
         }
     }
 }
-@media (min-width: 920px) {
-    body .main {
-    overflow: hidden;
-    grid-template-columns: 1fr 18fr 18fr 1fr;
-    grid-template-rows: 100vh 500px 580px 720px 580px;
-    grid-template-areas:
-    "portada portada portada portada"
-    "sobreMi sobreMi sobreMi ."
-    " . habilidades habilidades habilidades"
-    ". educacion experiencia ."
-    "contacto contacto contacto contacto";
-    .sobreMi {
-        display: grid;
-        position: relative;
-        grid-template-areas: 
-        ". titulo"
-        "foto parrafo";
-        grid-template-columns: 2fr 8fr;
-        grid-template-rows: 2fr 8fr;
-        h2 {
-            grid-area: titulo;
-            margin-bottom: 0.8em;
-            margin-left: 5%; 
-         }
-        img {
-            grid-area: foto;
-        position: absolute;
-        right: 0;
+@supports (display: grid){
+    @media (min-width: 920px) {
+        nav h1 {
+            margin-right: 150px;
         }
-        p {
-        margin-top: 2%; 
-        grid-area: parrafo;
+        body .main {
+        overflow: hidden;
+        grid-template-columns: 1fr 18fr 18fr 1fr;
+        grid-template-rows: 100vh 500px 580px 720px 580px;
+        grid-template-areas:
+        "portada portada portada portada"
+        "sobreMi sobreMi sobreMi ."
+        " . habilidades habilidades habilidades"
+        ". educacion experiencia ."
+        "contacto contacto contacto contacto";
+        .sobreMi {
+            display: grid;
+            position: relative;
+            grid-template-areas: 
+            ". titulo"
+            "foto parrafo";
+            grid-template-columns: 2fr 8fr;
+            grid-template-rows: 2fr 8fr;
+            h2 {
+                grid-area: titulo;
+                margin-bottom: 0.8em;
+                margin-left: 5%; 
+            }
+            img {
+                grid-area: foto;
+            position: absolute;
+            right: 0;
+            }
+            p {
+            margin-top: 2%; 
+            grid-area: parrafo;
+            }
+        }
+        .habilidades {
+            background-color: $verdeApagado;
+            margin-top: 30px;
+            color: $blanco;
+            grid-template-columns: 5.5fr 4.5fr;
+            grid-template-rows: 3fr 9fr;
+            display: grid;
+            grid-template-areas:
+            "iconos titulo"
+            "iconos caja";
+            h2 {
+                grid-area: titulo;
+                margin-bottom: 0;
+            }
+            .grid-iconos {
+                grid-area: iconos;
+                -webkit-clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
+                clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
+                align-content: center;
+                background-color: $blanco;
+                height: 50%;
+                margin-top: 5%;
+                grid-row-gap: 1em;
+                display: grid;
+                grid-template-areas: "i i i i" "i i i i";
+                img {
+                    width: 90px;
+                    margin: 0;
+                    height: 100px;
+                    }
+                }
+            .huecoIconos {
+                width: 90px;
+                height: 100px;
+                margin: 1em 1em;
+            }
+            
+        }
+        .educacion {
+            @include trapecioDcha;
+            margin-left: 0;
+            
+            li {
+                font-size: 0.9em;
+            }
+        }
+        .experiencia {
+            @include trapecioIzda;
+            padding-top: 7vh;
+            border-left: 1px solid white;
+            margin-left:-1px;
+            h2 {
+                margin-bottom: 7.5vh;
+            }
+            li {
+                font-size: 0.96em;
+            }
+        }
+        .experiencia, .educacion {
+            margin-top: -70px;
+            box-sizing: content-box;
+            background-color: $blanco;
+            color: $azulOscuro;
+            padding-top: 15%;
+        }
+        .contacto {
+            margin-top: -140px;
+            box-sizing: content-box;
+            overflow: hidden;
+            height: 620px;
+        }
         }
     }
-    .habilidades {
-        background-color: $verdeApagado;
-        margin-top: 30px;
-        color: $blanco;
-        grid-template-columns: 5.5fr 4.5fr;
-        grid-template-rows: 3fr 9fr;
-        display: grid;
-        grid-template-areas:
-        "iconos titulo"
-        "iconos caja";
-        h2 {
-            grid-area: titulo;
-            margin-bottom: 0;
+    @media (min-width: 1024px) {
+        body {
+            .main {
+                grid-template-areas:
+                "portada portada portada portada portada portada"
+                ". sobreMi sobreMi sobreMi sobreMi ."
+                ". habilidades habilidades habilidades habilidades ."
+                ". . educacion experiencia . ."
+                ". contacto contacto contacto contacto.";
+                grid-template-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
+            }
         }
-        .grid-iconos {
-            grid-area: iconos;
-            -webkit-clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
-            clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
-            align-content: center;
-            background-color: $blanco;
-            height: 50%;
-            margin-top: 5%;
-            grid-row-gap: 1em;
-            display: grid;
-            grid-template-areas: "i i i i" "i i i i";
-            img {
-                width: 90px;
-                margin: 0;
-                height: 100px;
+    }
+}
+    @media (min-width: 1280px) {
+        body {
+            nav {
+                padding-left: 300px;
+                .tcon {
+                    display: none;
+                }
+                .menuDropdown {
+                    left: 0;
+                    margin-left: 0;
+                    padding-left: 0;
+                    border-right: 5px solid $bordeAzul;
                 }
             }
-        .huecoIconos {
-            width: 90px;
-            height: 100px;
-            margin: 1em 1em;
-        }
-        
-    }
-    .educacion {
-        @include trapecioDcha;
-        margin-left: 0;
-        
-        li {
-            font-size: 0.9em;
-        }
-    }
-    .experiencia {
-        @include trapecioIzda;
-        padding-top: 7vh;
-        border-left: 1px solid white;
-        margin-left:-1px;
-        h2 {
-            margin-bottom: 7.5vh;
-        }
-        li {
-            font-size: 0.96em;
-        }
-    }
-    .experiencia, .educacion {
-        margin-top: -70px;
-        box-sizing: content-box;
-        background-color: $blanco;
-        color: $azulOscuro;
-        padding-top: 15%;
-    }
-    .contacto {
-        margin-top: -140px;
-        box-sizing: content-box;
-        overflow: hidden;
-        height: 620px;
-    }
-    }
-}
-@media (min-width: 1024px) {
-    body {
-        .main {
-            grid-template-areas:
-            "portada portada portada portada portada portada"
-            ". sobreMi sobreMi sobreMi sobreMi ."
-            ". habilidades habilidades habilidades habilidades ."
-            ". . educacion experiencia . ."
-            ". contacto contacto contacto contacto.";
-            grid-template-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
-        }
-    }
-}
-
-@media (min-width: 1280px) {
-    body {
-        nav {
-            padding-left: 300px;
-            .tcon {
-                display: none;
+            .main {
+                margin-left: 300px;
             }
-            .menuDropdown {
-                left: 0;
-                margin-left: 0;
-                padding-left: 0;
-                border-right: 5px solid $bordeAzul;
+            footer {
+                padding-top: 140px;
+                margin-left: 300px;
             }
         }
-        .main {
-            margin-left: 300px;
-        }
-        footer {
-            padding-top: 140px;
-            margin-left: 300px;
-        }
     }
-}

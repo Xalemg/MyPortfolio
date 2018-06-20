@@ -47,13 +47,16 @@
             grid-template-areas: 
             "nombre email"
             "texto texto"
-            " . enviar";
+            " enviar enviar";
             grid-template-columns: 45% 45%;
             margin-left: 15%;
             margin-right: 14%;
            
             label {
                 width: 100%;
+                input {
+                    width: 100%;
+                }
             }
             .nombre {
                 grid-area: nombre;
