@@ -1403,6 +1403,7 @@ nav .tcon-transform + ul {
 .contacto form label input {
   margin: 1em 0;
   display: inline;
+  width: 90%;
   background-color: #FFFFFF;
   color: black;
 }
@@ -1502,31 +1503,29 @@ footer .copyright {
   margin-bottom: 0;
 }
 
-@media (min-width: 640px) {
-  nav .menuDropdown {
-    width: 300px;
-    padding: 5vh 0;
-    background-color: #1b487d;
-    font-size: 1.2em;
+@supports (-webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) or (clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) {
+  @media (min-width: 640px) {
+    nav .menuDropdown {
+      width: 300px;
+      padding: 5vh 0;
+      background-color: #1b487d;
+      font-size: 1.2em;
+    }
+    .habilidades .text {
+      margin-top: 10px;
+    }
+    .main {
+      margin-left: 0px;
+    }
   }
-  .habilidades .text {
-    margin-top: 10px;
+  @media (min-width: 800px) {
+    body {
+      font-size: 20px;
+    }
+    body .main {
+      grid-template-columns: 1fr 360px 360px 1fr;
+    }
   }
-  .main {
-    margin-left: 0px;
-  }
-}
-
-@media (min-width: 800px) {
-  body {
-    font-size: 20px;
-  }
-  body .main {
-    grid-template-columns: 1fr 360px 360px 1fr;
-  }
-}
-
-@supports (display: grid) {
   @media (min-width: 920px) {
     nav h1 {
       margin-right: 150px;
@@ -1674,27 +1673,26 @@ footer .copyright {
       grid-template-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
     }
   }
-}
-
-@media (min-width: 1280px) {
-  body nav {
-    padding-left: 300px;
-  }
-  body nav .tcon {
-    display: none;
-  }
-  body nav .menuDropdown {
-    left: 0;
-    margin-left: 0;
-    padding-left: 0;
-    border-right: 5px solid #091e38;
-  }
-  body .main {
-    margin-left: 300px;
-  }
-  body footer {
-    padding-top: 140px;
-    margin-left: 300px;
+  @media (min-width: 1280px) {
+    body nav {
+      padding-left: 300px;
+    }
+    body nav .tcon {
+      display: none;
+    }
+    body nav .menuDropdown {
+      left: 0;
+      margin-left: 0;
+      padding-left: 0;
+      border-right: 5px solid #091e38;
+    }
+    body .main {
+      margin-left: 300px;
+    }
+    body footer {
+      padding-top: 140px;
+      margin-left: 300px;
+    }
   }
 }
 

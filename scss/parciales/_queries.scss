@@ -1,3 +1,4 @@
+@supports(-webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) or (clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)){
 @media (min-width: 640px) {
     nav .menuDropdown {
         width: 300px;
@@ -20,7 +21,6 @@
         }
     }
 }
-@supports (display: grid){
     @media (min-width: 920px) {
         nav h1 {
             margin-right: 150px;
@@ -144,7 +144,6 @@
             }
         }
     }
-}
     @media (min-width: 1280px) {
         body {
             nav {
@@ -168,3 +167,4 @@
             }
         }
     }
+}
