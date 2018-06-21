@@ -65,3 +65,9 @@ h2 {
     display: block;
     clear: both;
  }
+ //Clase para evitar el scroll en moviles mirar navbar.js
+ .noscroll { 
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}

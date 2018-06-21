@@ -868,6 +868,12 @@ ul {
   clear: both;
 }
 
+.noscroll {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 nav {
   background: #FFFFFF;
   text-align: center;
@@ -1403,7 +1409,7 @@ nav .tcon-transform + ul {
 .contacto form label input {
   margin: 1em 0;
   display: inline;
-  width: 90%;
+  width: 100%;
   background-color: #FFFFFF;
   color: black;
 }

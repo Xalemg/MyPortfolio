@@ -214,8 +214,9 @@ function disableScroll() {
       window.addEventListener('DOMMouseScroll', preventDefault, false);
   window.onwheel = preventDefault; // modern standard
   window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-  window.ontouchmove  = preventDefault; // mobile
   document.onkeydown  = preventDefaultForScrollKeys;
+  var scrollable = true;
+  document.getElementById("body").classList.add("noscroll");
 }
 //habilita el scroll
 function enableScroll() {
@@ -223,6 +224,6 @@ function enableScroll() {
         window.removeEventListener('DOMMouseScroll', preventDefault, false);
     window.onmousewheel = document.onmousewheel = null; 
     window.onwheel = null; 
-    window.ontouchmove = null;  
-    document.onkeydown = null;  
+    document.onkeydown = null; 
+    document.getElementById("body").classList.remove("noscroll");
 }
