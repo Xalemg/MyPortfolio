@@ -38,7 +38,8 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -68,7 +69,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -198,7 +200,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -232,7 +235,8 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -334,7 +338,8 @@ template {
 .shake {
   -webkit-animation-name: shake;
   animation-name: shake;
-  animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
 }
 
 @-webkit-keyframes shake {
@@ -388,7 +393,8 @@ template {
   animation-name: jello;
   -webkit-transform-origin: center;
   transform-origin: center;
-  animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
 }
 
 @-webkit-keyframes jello {
@@ -468,7 +474,8 @@ template {
 .rubberBand {
   -webkit-animation-name: rubberBand;
   animation-name: rubberBand;
-  animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
 }
 
 @-webkit-keyframes rubberBand {
@@ -594,13 +601,38 @@ template {
 .tada {
   -webkit-animation-name: tada;
   animation-name: tada;
-  animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
 }
 
 .jackInTheBox {
   -webkit-animation-name: jackInTheBox;
   animation-name: jackInTheBox;
-  animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+}
+
+@-webkit-keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.1) rotate(30deg);
+    transform: scale(0.1) rotate(30deg);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  70% {
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
 @keyframes jackInTheBox {
@@ -629,7 +661,8 @@ template {
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
-  animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -670,7 +703,8 @@ template {
 .rotateIn {
   -webkit-animation-name: rotateIn;
   animation-name: rotateIn;
-  animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
 }
 
 @keyframes rotateIn {
@@ -693,7 +727,8 @@ template {
 .zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
-  animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
 }
 
 @-webkit-keyframes zoomIn {
@@ -723,7 +758,8 @@ template {
   backface-visibility: visible !important;
   -webkit-animation-name: flipInX;
   animation-name: flipInX;
-  animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
 }
 
 @-webkit-keyframes flipInX {
@@ -796,7 +832,8 @@ template {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -810,10 +847,15 @@ body {
 
 #myVideo {
   position: fixed;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
   min-width: 100%;
   min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .main {
@@ -822,13 +864,16 @@ body {
 
 @supports (display: grid) {
   .main {
+    display: -ms-grid;
     display: grid;
     margin-left: 0;
     height: 100%;
     padding-left: 0;
-    grid-template-columns: 1fr 10fr 10fr 1fr;
-    grid-template-rows: 100vh 680px 680px 680px 680px auto;
-    grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
+    -ms-grid-columns: 1fr 10fr 10fr 1fr;
+        grid-template-columns: 1fr 10fr 10fr 1fr;
+    -ms-grid-rows: 100vh 680px 680px 680px 680px auto;
+        grid-template-rows: 100vh 680px 680px 680px 680px auto;
+        grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
   }
 }
 
@@ -877,16 +922,24 @@ ul {
 nav {
   background: #FFFFFF;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: fixed;
   top: 0;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   height: 50px;
   width: 100%;
-  flex: wrap;
+  -webkit-box-flex: wrap;
+      -ms-flex: wrap;
+          flex: wrap;
   z-index: 1000;
-  align-items: center;
-  box-shadow: 0 0 5px grey;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 5px grey;
+          box-shadow: 0 0 5px grey;
 }
 
 nav h1 {
@@ -904,13 +957,19 @@ nav .menuDropdown {
   width: 100%;
   z-index: 999;
   left: -110vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 50px;
   margin-left: 0;
   margin-bottom: 0;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   font-size: 2.5em;
   background-color: rgba(15, 52, 100, 0.911);
 }
@@ -957,26 +1016,40 @@ nav .menuDropdown li:hover::after {
   position: absolute;
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
-  animation-duration: 0.250s;
-  animation-timing-function: ease-out;
+  -webkit-animation-duration: 0.250s;
+          animation-duration: 0.250s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 
 nav .tcon {
   z-index: 99999;
   margin-left: 10px;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: none;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 28px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   width: 28px;
   background: transparent;
   outline: none;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -997,6 +1070,7 @@ nav .tcon-menu__lines {
   height: 4px;
   width: 28px;
   border-radius: 2px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   background: #95989A;
   position: relative;
@@ -1007,12 +1081,14 @@ nav .tcon-menu__lines::before, nav .tcon-menu__lines::after {
   height: 4px;
   width: 28px;
   border-radius: 2px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   background: #95989A;
   content: '';
   position: absolute;
   left: 0;
-  transform-origin: 2px center;
+  -webkit-transform-origin: 2px center;
+          transform-origin: 2px center;
   width: 100%;
 }
 
@@ -1025,7 +1101,8 @@ nav .tcon-menu__lines::after {
 }
 
 .tcon-transform nav .tcon-menu__lines {
-  transform: scale3d(0.8, 0.8, 0.8);
+  -webkit-transform: scale3d(0.8, 0.8, 0.8);
+          transform: scale3d(0.8, 0.8, 0.8);
 }
 
 nav .tcon-menu--xcross {
@@ -1037,17 +1114,20 @@ nav .tcon-menu--xcross.tcon-transform .tcon-menu__lines {
 }
 
 nav .tcon-menu--xcross.tcon-transform .tcon-menu__lines::before, nav .tcon-menu--xcross.tcon-transform .tcon-menu__lines::after {
-  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
   top: 0;
   width: 28px;
 }
 
 nav .tcon-menu--xcross.tcon-transform .tcon-menu__lines::before {
-  transform: rotate3d(0, 0, 1, 45deg);
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+          transform: rotate3d(0, 0, 1, 45deg);
 }
 
 nav .tcon-menu--xcross.tcon-transform .tcon-menu__lines::after {
-  transform: rotate3d(0, 0, 1, -45deg);
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+          transform: rotate3d(0, 0, 1, -45deg);
 }
 
 nav .tcon-visuallyhidden {
@@ -1081,13 +1161,20 @@ nav .tcon-transform + ul {
   width: 100%;
   background-position: center;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 10vh;
   position: relative;
   text-align: center;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @supports (display: grid) {
@@ -1205,9 +1292,12 @@ nav .tcon-transform + ul {
   margin: 0 auto;
   color: #FFFFFF;
   padding-left: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: left;
-  align-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
 
 .habilidades .selector .text {
@@ -1264,6 +1354,7 @@ nav .tcon-transform + ul {
   position: relative;
   background-color: #206622;
   -webkit-transition: all 2s ease-out;
+  -webkit-transition: all 2s  ease-out;
   transition: all 2s  ease-out;
 }
 
@@ -1272,10 +1363,16 @@ nav .tcon-transform + ul {
   width: 90%;
   height: 280px;
   margin: 3em auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .habilidades .grid-iconos img {
@@ -1393,12 +1490,23 @@ nav .tcon-transform + ul {
 }
 
 .contacto form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  align-content: space-around;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .contacto form label {
@@ -1436,9 +1544,11 @@ nav .tcon-transform + ul {
   }
   @media (min-width: 700px) {
     .contacto form {
+      display: -ms-grid;
       display: grid;
-      grid-template-areas: "nombre email" "texto texto" " enviar enviar";
-      grid-template-columns: 45% 45%;
+          grid-template-areas: "nombre email" "texto texto" " enviar enviar";
+      -ms-grid-columns: 45% 45%;
+          grid-template-columns: 45% 45%;
       margin-left: 15%;
       margin-right: 14%;
     }
@@ -1449,12 +1559,19 @@ nav .tcon-transform + ul {
       width: 100%;
     }
     .contacto form .nombre {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
       grid-area: nombre;
     }
     .contacto form .email {
+      -ms-grid-row: 1;
+      -ms-grid-column: 2;
       grid-area: email;
     }
     .contacto form .mensaje {
+      -ms-grid-row: 2;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 2;
       grid-area: texto;
       font-size: 0.8em;
     }
@@ -1466,6 +1583,9 @@ nav .tcon-transform + ul {
     .contacto form button {
       width: 300px;
       cursor: pointer;
+      -ms-grid-row: 3;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 2;
       grid-area: enviar;
     }
   }
@@ -1486,11 +1606,18 @@ footer .mensajeResponsive {
 }
 
 footer .iconosRedes {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer .iconosRedes img {
@@ -1509,7 +1636,7 @@ footer .copyright {
   margin-bottom: 0;
 }
 
-@supports (-webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) or (clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) {
+@supports ((-webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) or (clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%))) {
   @media (min-width: 640px) {
     nav .menuDropdown {
       width: 300px;
@@ -1529,7 +1656,8 @@ footer .copyright {
       font-size: 20px;
     }
     body .main {
-      grid-template-columns: 1fr 360px 360px 1fr;
+      -ms-grid-columns: 1fr 360px 360px 1fr;
+          grid-template-columns: 1fr 360px 360px 1fr;
     }
   }
   @media (min-width: 920px) {
@@ -1538,55 +1666,76 @@ footer .copyright {
     }
     body .main {
       overflow: hidden;
-      grid-template-columns: 1fr 18fr 18fr 1fr;
-      grid-template-rows: 100vh 500px 580px 720px 580px;
-      grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". educacion experiencia ." "contacto contacto contacto contacto";
+      -ms-grid-columns: 1fr 18fr 18fr 1fr;
+          grid-template-columns: 1fr 18fr 18fr 1fr;
+      -ms-grid-rows: 100vh 500px 580px 720px 580px;
+          grid-template-rows: 100vh 500px 580px 720px 580px;
+          grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". educacion experiencia ." "contacto contacto contacto contacto";
     }
     body .main .sobreMi {
+      display: -ms-grid;
       display: grid;
       position: relative;
-      grid-template-areas: ". titulo" "foto parrafo";
-      grid-template-columns: 2fr 8fr;
-      grid-template-rows: 2fr 8fr;
+          grid-template-areas: ". titulo" "foto parrafo";
+      -ms-grid-columns: 2fr 8fr;
+          grid-template-columns: 2fr 8fr;
+      -ms-grid-rows: 2fr 8fr;
+          grid-template-rows: 2fr 8fr;
     }
     body .main .sobreMi h2 {
+      -ms-grid-row: 1;
+      -ms-grid-column: 2;
       grid-area: titulo;
       margin-bottom: 0.8em;
       margin-left: 5%;
     }
     body .main .sobreMi img {
+      -ms-grid-row: 2;
+      -ms-grid-column: 1;
       grid-area: foto;
       position: absolute;
       right: 0;
     }
     body .main .sobreMi p {
       margin-top: 2%;
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
       grid-area: parrafo;
     }
     body .main .habilidades {
       background-color: #0f3464;
       margin-top: 30px;
       color: #FFFFFF;
-      grid-template-columns: 5.5fr 4.5fr;
-      grid-template-rows: 3fr 9fr;
+      -ms-grid-columns: 5.5fr 4.5fr;
+          grid-template-columns: 5.5fr 4.5fr;
+      -ms-grid-rows: 3fr 9fr;
+          grid-template-rows: 3fr 9fr;
+      display: -ms-grid;
       display: grid;
-      grid-template-areas: "iconos titulo" "iconos caja";
+          grid-template-areas: "iconos titulo" "iconos caja";
     }
     body .main .habilidades h2 {
+      -ms-grid-row: 1;
+      -ms-grid-column: 2;
       grid-area: titulo;
       margin-bottom: 0;
     }
     body .main .habilidades .grid-iconos {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 2;
+      -ms-grid-column: 1;
       grid-area: iconos;
       -webkit-clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
       clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
-      align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
       background-color: #FFFFFF;
       height: 50%;
       margin-top: 5%;
       grid-row-gap: 1em;
+      display: -ms-grid;
       display: grid;
-      grid-template-areas: "i i i i" "i i i i";
+          grid-template-areas: "i i i i" "i i i i";
     }
     body .main .habilidades .grid-iconos img {
       width: 90px;
@@ -1661,22 +1810,25 @@ footer .copyright {
     }
     body .main .experiencia, body .main .educacion {
       margin-top: -70px;
-      box-sizing: content-box;
+      -webkit-box-sizing: content-box;
+              box-sizing: content-box;
       background-color: #FFFFFF;
       color: #02387a;
       padding-top: 15%;
     }
     body .main .contacto {
       margin-top: -140px;
-      box-sizing: content-box;
+      -webkit-box-sizing: content-box;
+              box-sizing: content-box;
       overflow: hidden;
       height: 620px;
     }
   }
   @media (min-width: 1024px) {
     body .main {
-      grid-template-areas: "portada portada portada portada portada portada" ". sobreMi sobreMi sobreMi sobreMi ." ". habilidades habilidades habilidades habilidades ." ". . educacion experiencia . ." ". contacto contacto contacto contacto.";
-      grid-template-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
+          grid-template-areas: "portada portada portada portada portada portada" ". sobreMi sobreMi sobreMi sobreMi ." ". habilidades habilidades habilidades habilidades ." ". . educacion experiencia . ." ". contacto contacto contacto contacto.";
+      -ms-grid-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
+          grid-template-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
     }
   }
   @media (min-width: 1280px) {
