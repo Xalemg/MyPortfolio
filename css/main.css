@@ -1480,6 +1480,7 @@ nav .tcon-transform + ul {
 }
 
 .contacto {
+  z-index: 2;
   text-align: center;
 }
 
@@ -1517,7 +1518,6 @@ nav .tcon-transform + ul {
 .contacto form label input {
   margin: 1em 0;
   display: inline;
-  width: 100%;
   background-color: #FFFFFF;
   color: black;
 }
@@ -1592,11 +1592,15 @@ nav .tcon-transform + ul {
 }
 
 footer {
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 50% 100%, 0 100%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 50% 100%, 0 100%, 0% 25%);
   padding-top: 60px;
   text-align: center;
   position: relative;
+  overflow: hidden;
   bottom: 0;
   margin-top: 0;
+  background-color: #0000005d;
   padding-bottom: 30px;
 }
 

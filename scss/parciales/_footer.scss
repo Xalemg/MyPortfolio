@@ -1,9 +1,12 @@
 footer {
+    @include hexagono;
     padding-top: 60px;
     text-align: center;
     position: relative;
+    overflow: hidden;
     bottom: 0;
     margin-top: 0;
+    background-color: #0000005d;
     padding-bottom: 30px;
     @supports (display : grid) {
     }

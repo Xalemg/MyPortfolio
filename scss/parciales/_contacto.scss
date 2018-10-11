@@ -1,5 +1,6 @@
 .contacto {
     @extend %contacto;
+    z-index: 2;
     text-align: center;
     @supports (display: grid) {
         grid-area: contacto;
@@ -17,7 +18,6 @@
             input {
                 margin: 1em 0;
                 display: inline;
-                width: 100%;
                 background-color: $blanco;
                 color: black;
             }

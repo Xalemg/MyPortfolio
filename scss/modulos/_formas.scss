@@ -48,6 +48,12 @@
         clear: both;
     }
 }
+
+@mixin hexagono {
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 50% 100%, 0 100%, 0% 25%);
+clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 50% 100%, 0 100%, 0% 25%);
+}
+
 %contacto {
     width: 100%;
     margin-top: -25vh;
