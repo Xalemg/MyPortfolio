@@ -14,11 +14,7 @@
     height: 110vh;
     -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
     clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-    &:after {
-        content: '';
-        display: block;
-        clear: both;
-    }
+
     @supports (display: grid) {
         width: 100%;
         height: 110%;

@@ -36,10 +36,12 @@
         ". educacion experiencia ."
         "contacto contacto contacto contacto";
         .sobreMi {
-            display: grid;
-            position: relative;
-            grid-template-areas: 
-            ". titulo"
+            
+                margin-top: -15px;
+                display: grid;
+                position: relative;
+                grid-template-areas: 
+                ". titulo"
             "foto parrafo";
             grid-template-columns: 2fr 8fr;
             grid-template-rows: 2fr 8fr;
@@ -57,6 +59,7 @@
             margin-top: 2%; 
             grid-area: parrafo;
             }
+            
         }
         .habilidades {
             background-color: $verdeApagado;

@@ -1,0 +1,21 @@
+
+.shadowTrapecioIzda {
+    grid-area: sobreMi;
+    position: absolute;
+  z-index: -1;
+  content: "";
+  background: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100%;
+  left: 5px;
+  top: 5px;
+  filter : blur(5px);
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    @supports (display: grid) {
+        width: 100.2%;
+        height: 109%;
+        grid-area: sobreMi;
+        margin-top: 0;
+    }
+}
