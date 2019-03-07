@@ -841,8 +841,6 @@ template {
   height: 100%;
   left: 5px;
   top: 5px;
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
   clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
 }
@@ -1232,6 +1230,12 @@ nav .tcon-transform + ul {
   position: relative;
 }
 
+.sobreMi:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 @supports (display: grid) {
   .sobreMi {
     width: 100%;
@@ -1415,6 +1419,12 @@ nav .tcon-transform + ul {
   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
   clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
   position: relative;
+}
+
+.educacion:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 @supports (display: grid) {
@@ -1685,8 +1695,8 @@ footer .copyright {
       overflow: hidden;
       -ms-grid-columns: 1fr 18fr 18fr 1fr;
           grid-template-columns: 1fr 18fr 18fr 1fr;
-      -ms-grid-rows: 100vh 500px 580px 720px 580px;
-          grid-template-rows: 100vh 500px 580px 720px 580px;
+      -ms-grid-rows: 102vh 500px 580px 720px 580px;
+          grid-template-rows: 102vh 500px 580px 720px 580px;
           grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". educacion experiencia ." "contacto contacto contacto contacto";
     }
     body .main .sobreMi {
@@ -1807,6 +1817,11 @@ footer .copyright {
       padding-top: 7vh;
       border-left: 1px solid white;
       margin-left: -1px;
+    }
+    body .main .experiencia:after {
+      content: '';
+      display: block;
+      clear: both;
     }
     @supports (display: grid) {
       body .main .experiencia {
