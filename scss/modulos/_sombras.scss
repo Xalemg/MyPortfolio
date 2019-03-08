@@ -1,0 +1,67 @@
+
+.shadowSobreMi {
+  @supports (display: grid) {
+    grid-area: sobreMi;
+    position: absolute;
+    z-index: -100;
+    content: "";
+    background: rgba(0, 0, 0, .5);
+    left: 5px;
+    top: 1%;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    width: 100.2%;
+    height: 109%;
+    grid-area: sobreMi;
+    margin-top: 0;
+  }
+}
+
+.shadowHabilidades {
+  @supports (display: grid) {
+    position: absolute;
+    z-index: -100;
+    content: "";
+    background: rgba(0, 0, 0, .5);
+    left: -5px;
+    top: 1%;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
+    width: 101%;
+    height: 109%;
+    grid-area: habilidades;
+  }
+}
+.shadowEducacion {
+  @supports (display: grid) {
+    grid-area: sobreMi;
+    position: absolute;
+    z-index: -100;
+    content: "";
+    background: rgba(0, 0, 0, .5);
+    left: 5px;
+    top: 1%;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    width: 100.2%;
+    height: 109%;
+    grid-area: educacion;
+    margin-top: 0;
+  }
+}
+.shadowExperiencia {
+  @supports (display: grid) {
+    position: absolute;
+    z-index: -100;
+    content: "";
+    background: rgba(0, 0, 0, .5);
+    left: -5px;
+    top: 1%;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
+    width: 101%;
+    height: 109%;
+    grid-area: experiencia;
+    margin-top: 0;
+  }
+}

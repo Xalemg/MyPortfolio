@@ -316,7 +316,7 @@ template {
   padding-bottom: 7vh;
   float: left;
   position: relative;
-  background-color: #0f3464;
+  background-color: #002453;
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
   clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
 }
@@ -831,6 +831,75 @@ template {
   }
 }
 
+@supports (display: grid) {
+  .shadowSobreMi {
+    grid-area: sobreMi;
+    position: absolute;
+    z-index: -100;
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    left: 5px;
+    top: 1%;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    width: 100.2%;
+    height: 109%;
+    grid-area: sobreMi;
+    margin-top: 0;
+  }
+}
+
+@supports (display: grid) {
+  .shadowHabilidades {
+    position: absolute;
+    z-index: -100;
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    left: -5px;
+    top: 1%;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
+    width: 101%;
+    height: 109%;
+    grid-area: habilidades;
+  }
+}
+
+@supports (display: grid) {
+  .shadowEducacion {
+    grid-area: sobreMi;
+    position: absolute;
+    z-index: -100;
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    left: 5px;
+    top: 1%;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    width: 100.2%;
+    height: 109%;
+    grid-area: educacion;
+    margin-top: 0;
+  }
+}
+
+@supports (display: grid) {
+  .shadowExperiencia {
+    position: absolute;
+    z-index: -100;
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    left: -5px;
+    top: 1%;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
+    width: 101%;
+    height: 109%;
+    grid-area: experiencia;
+    margin-top: 0;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -873,7 +942,7 @@ body {
         grid-template-columns: 1fr 10fr 10fr 1fr;
     -ms-grid-rows: 100vh 680px 680px 680px 680px auto;
         grid-template-rows: 100vh 680px 680px 680px 680px auto;
-        grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
+        grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
   }
 }
 
@@ -1199,7 +1268,7 @@ nav .tcon-transform + ul {
   padding-top: 7vh;
   position: relative;
   float: left;
-  background-color: #0f3464;
+  background-color: #002453;
   width: 97%;
   height: 110vh;
   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
@@ -1390,7 +1459,7 @@ nav .tcon-transform + ul {
   padding-top: 7vh;
   position: relative;
   float: left;
-  background-color: #0f3464;
+  background-color: #002453;
   width: 97%;
   height: 110vh;
   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
@@ -1546,7 +1615,7 @@ nav .tcon-transform + ul {
     .contacto form {
       display: -ms-grid;
       display: grid;
-          grid-template-areas: "nombre email" "texto texto" " enviar enviar";
+          grid-template-areas: "nombre email" "texto texto" " enviar enviar";
       -ms-grid-columns: 45% 45%;
           grid-template-columns: 45% 45%;
       margin-left: 15%;
@@ -1672,15 +1741,16 @@ footer .copyright {
       overflow: hidden;
       -ms-grid-columns: 1fr 18fr 18fr 1fr;
           grid-template-columns: 1fr 18fr 18fr 1fr;
-      -ms-grid-rows: 100vh 500px 580px 720px 580px;
-          grid-template-rows: 100vh 500px 580px 720px 580px;
-          grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". educacion experiencia ." "contacto contacto contacto contacto";
+      -ms-grid-rows: 102vh 500px 580px 720px 580px;
+          grid-template-rows: 102vh 500px 580px 720px 580px;
+          grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". educacion experiencia ." "contacto contacto contacto contacto";
     }
     body .main .sobreMi {
+      margin-top: -15px;
       display: -ms-grid;
       display: grid;
       position: relative;
-          grid-template-areas: ". titulo" "foto parrafo";
+          grid-template-areas: ". titulo" "foto parrafo";
       -ms-grid-columns: 2fr 8fr;
           grid-template-columns: 2fr 8fr;
       -ms-grid-rows: 2fr 8fr;
@@ -1707,16 +1777,17 @@ footer .copyright {
       grid-area: parrafo;
     }
     body .main .habilidades {
-      background-color: #0f3464;
+      background-color: #002453;
       margin-top: 30px;
       color: #FFFFFF;
+      z-index: -10;
       -ms-grid-columns: 5.5fr 4.5fr;
           grid-template-columns: 5.5fr 4.5fr;
       -ms-grid-rows: 3fr 9fr;
           grid-template-rows: 3fr 9fr;
       display: -ms-grid;
       display: grid;
-          grid-template-areas: "iconos titulo" "iconos caja";
+          grid-template-areas: "iconos titulo" "iconos caja";
     }
     body .main .habilidades h2 {
       -ms-grid-row: 1;
@@ -1750,6 +1821,11 @@ footer .copyright {
       width: 90px;
       height: 100px;
       margin: 1em 1em;
+    }
+    body .main .shadowHabilidades {
+      margin-top: 5.8vh;
+      left: 5px;
+      width: 100.2%;
     }
     body .main .educacion {
       float: right;
@@ -1785,7 +1861,7 @@ footer .copyright {
       padding-top: 7vh;
       position: relative;
       float: left;
-      background-color: #0f3464;
+      background-color: #002453;
       width: 97%;
       height: 110vh;
       -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
@@ -1812,6 +1888,19 @@ footer .copyright {
     body .main .experiencia li {
       font-size: 0.96em;
     }
+    body .main .shadowExperiencia {
+      -ms-grid-row: 4;
+      -ms-grid-column: 3;
+      grid-area: experiencia;
+      position: absolute;
+      z-index: -1;
+      content: "";
+      background: rgba(0, 0, 0, 0.5);
+      left: 5px;
+      top: 1%;
+      -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+      clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    }
     body .main .experiencia, body .main .educacion {
       margin-top: -70px;
       -webkit-box-sizing: content-box;
@@ -1827,10 +1916,26 @@ footer .copyright {
       overflow: hidden;
       height: 620px;
     }
+    body .main .shadowContacto {
+      position: absolute;
+      z-index: -100;
+      content: "";
+      background: rgba(0, 0, 0, 0.5);
+      left: 5px;
+      top: -18%;
+      -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+      width: 100%;
+      height: 120%;
+      -ms-grid-row: 5;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 4;
+      grid-area: contacto;
+    }
   }
   @media (min-width: 1024px) {
     body .main {
-          grid-template-areas: "portada portada portada portada portada portada" ". sobreMi sobreMi sobreMi sobreMi ." ". habilidades habilidades habilidades habilidades ." ". . educacion experiencia . ." ". contacto contacto contacto contacto.";
+          grid-template-areas: "portada portada portada portada portada portada" ". sobreMi sobreMi sobreMi sobreMi ." ". habilidades habilidades habilidades habilidades ." ". . educacion experiencia . ." ". contacto contacto contacto contacto.";
       -ms-grid-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
           grid-template-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
     }
