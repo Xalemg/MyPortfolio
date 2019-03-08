@@ -1,29 +1,29 @@
-//ARCHIVO ENCARGADO DE GESTIONAR LAS ANIMACIONES DE LOSICONOS DE HABILIDAD
+//ARCHIVO ENCARGADO DE GESTIONAR LAS ANIMACIONES DE LOS ICONOS DE HABILIDAD
 
 
 //Inicializa los objetos con la informacion de las habilidades
-var php = new Lenguaje ("Php","php", 25 , "Conocimientos básicos");
-var css = new Lenguaje ("Css", "css", 95, "Conocimientos avanzados");
-var sass = new Lenguaje ("Sass", "sass", 68 , "Conocimientos inermedios");
-var java = new Lenguaje ("Java","java", 85 , "Conocimientos avanzados");
-var unity = new Lenguaje ("Unity","unity", 45 , "Conocimientos intermedios");
-var cSharp = new Lenguaje ("C#","cSharp", 30 , "Conocimientos básicos");
-var android = new Lenguaje ("Android","android", 70 , "Conocimientos intermedios");
-var javascript = new Lenguaje ("Javascript","js", 65 , "Conocimientos intermedios");
+let php = new Lenguaje ("Php","php", 25 , "Conocimientos básicos");
+let css = new Lenguaje ("Css", "css", 95, "Conocimientos avanzados");
+let sass = new Lenguaje ("Sass", "sass", 68 , "Conocimientos inermedios");
+let java = new Lenguaje ("Java","java", 85 , "Conocimientos avanzados");
+let unity = new Lenguaje ("Unity","unity", 45 , "Conocimientos intermedios");
+let cSharp = new Lenguaje ("C#","cSharp", 30 , "Conocimientos básicos");
+let android = new Lenguaje ("Android","android", 70 , "Conocimientos intermedios");
+let javascript = new Lenguaje ("Javascript","js", 65 , "Conocimientos intermedios");
 
-var habilidades = [php, css, sass, java, unity, cSharp, android, javascript];
+let habilidades = [php, css, sass, java, unity, cSharp, android, javascript];
 
 //Añade listeners a los iconos al cargar la pagina
 window.onload = addListener(habilidades.id);
 
 
 function addListener() {
-    for (var i=0;i<habilidades.length; i++){
+    for (let i=0;i<habilidades.length; i++){
         let miIcono = habilidades[i].id;
         let porcentaje = habilidades[i].habilidad;
         let nombre = habilidades[i].nombre;
         let descripcion = habilidades[i].descripcion;
-        document.getElementById(habilidades[i].id).addEventListener("click", function(){addAnimations(miIcono, porcentaje, nombre, descripcion)});
+        document.getElementById(habilidades[i].id).addEventListener("click", ()=>{addAnimations(miIcono, porcentaje, nombre, descripcion)});
     }
 }
 /*Función principal encargada de realizar las animaciones y modificaciones 
@@ -62,14 +62,18 @@ function animateHuecoElegido (nombre, animacion) {
 function randomAnimationGrid(){
     let i = getRandomInt(0, 4);
     let animaciones = ["shake", "jello","rubberBand", "tada"];
-    return animaciones[i];
+    const result = animaciones[i];
+    i= null;
+    return result;
 }
 
 //Elige aleatoriamente la animacion a realizar en el selector
 function randomAnimationElegido(){
     let i = getRandomInt(0, 5);
     let animaciones = ["jackInTheBox", "fadeIn", "rotateIn","zoomIn", "flipInX",];
-    return animaciones[i];
+    const result = animaciones[i];
+    i= null;
+    return result;
 }
 //Genera numeros enteros aleatorios equiprovables entre min y max
 function getRandomInt(min, max) {
