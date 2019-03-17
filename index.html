@@ -20,21 +20,22 @@
             <span class="tcon-visuallyhidden">toggle menu</span>
           </button>
         <ul class="menuDropdown" id="menu">
-            <li id="sobreMi" onclick="scrollSobreMi()">Sobre Mi</li>
-            <li id="habilidades" onclick="scrollHabilidades()">Habilidades</li>
-            <li id="educacion" onclick="scrollEducacion()">Educación</li>
-            <li id="experiencia" onclick="scrollExperiencia()">Experiencia</li>
-            <li id="contacto" onclick="scrollContacto()">Contacto</li>
+            <li id="sobreMi" onclick="scrollSobreMi()">About me</li>
+            <li id="sobreMi" onclick="scrollSobreMi()">Projects</li>
+            <li id="habilidades" onclick="scrollHabilidades()">Skills</li>
+            <li id="educacion" onclick="scrollEducacion()">Education</li>
+            <li id="experiencia" onclick="scrollExperiencia()">Experience</li>
+            <li id="contacto" onclick="scrollContacto()">Contact me</li>
             <li id="curriculum" onclick="downloadCV()">Curriculum</li>
         </ul>
         <h1>Alejandro Duque Quintana</h1>
     </nav>
     <div class="main" id="main">
         <section class="portada">
-            <h1>Bienvenido <br> a mi <span>Portfolio</span></h1>
+            <h1>Welcome <br> to my <span>Portfolio</span></h1>
         </section>
         <section class="sobreMi">
-            <h2>Sobre mi</h2>
+            <h2>About me</h2>
             <img src="img/yo.jpg" alt="Foto retrato de mi">
             <p>
                 Hola soy Alex, un desarrollador
@@ -48,12 +49,12 @@
         </section>
         <div class="shadowSobreMi"></div>        
         <section class="habilidades">
-            <h2>Habilidades</h2>
+            <h2>Skills</h2>
             <div class="habilidad">
                 <div class="selector">
                     <img id="icono-Elejido" class="huecoIconos" src="img/background-hex.png" alt="">
                     <div class="text"><h3 id="tituloHabilidad"> </h3>
-                        <p id="descripcion">Pulsa un icono para ver más información.</p>
+                        <p id="descripcion">Press any icon for more info.</p>
                     </div>
                 </div>
                 <div class="medidorHabilidad">
@@ -78,26 +79,27 @@
             <h2>Educación</h2>
         <ul class="titulos">
             <li><b> 2018 - Certificado de profesionalidad en Desarrollo de aplicaciones web</b></li>
-            <li><b> 2017 - Curso Desarrollo Android por CICE</b></li>
-            <li><b> Actualidad - Grado en Ingenieria informatica</b></li>
-            <li>2015  Titulo First Certificate por Cambridge (B1)</li>
-            <li>2016 - Curso de Ingles C1 por Idiomas4U</li>
-            <li>2010 - Bachillerato científico en I.E.S Laguna de Joatzel</li>
+            <li><b>2018 - Mysql expert developmento course</b></li>
+            <li><b> 2017 -Android development course by CICE</b></li>
+            <li><b>Currently - Computer Science Degree</b></li>
+            <li>2015  First Certificate by Cambridge (B1)</li>
+            <li>2016 - C1 course by Idiomas4U</li>
         </ul>
         </section>
         <div class="shadowEducacion"></div>
         <section class="experiencia">
-            <h2>Experiencia</h2>
+            <h2>Experience</h2>
             <ul class="trabajos">
-                <li><b>2018 - Desarrollador en Quelinka</b></li>
+                <li><b>2018 - Unity and web developer for Quelinka</b></li>
+                <li><b>2019 - Web developer for BBVA</b></li>
             </ul>
         </section>
         <div class="shadowExperiencia"></div>
         <section class="contacto">
-            <h2>Contacto</h2>
+            <h2>Contact me</h2>
             <form action="https://formspree.io/xalemg@gmail.com" method="post"  target="_blank">
                 <label  class="nombre">
-                    Nombre:
+                    Name:
                     <br>
                     <input type="text" id="name" name="name">
                 </label>
@@ -107,23 +109,23 @@
                     <input type="email" id="mail" name="mail">
                 </label>
                 <label class="mensaje">
-                    Mensaje:
+                    Message:
                     <textarea name="mensaje" id="mensaje" rows="5"></textarea>
                 </label>
-                <button class="enviar" type="submit">Enviar</button>
+                <button class="enviar" type="submit">Send</button>
             </form>
         </section>
         <div class="shadowContacto"></div>
     </div>
     </div>
     <footer id="footer">
-        <p class="mensajeResponsive">¡Comprueba el responsive de esta página!</p>
-        <p>Sigueme en:</p>
+        <p class="mensajeResponsive">¡Checkout the cool responsive design!</p>
+        <p>Contact me on:</p>
         <div class="iconosRedes">
             <a href="https://www.linkedin.com/in/alejandro-duque-quintana-59aaa414b/"  target="_blank"><img src="img/linkedin.png" alt="Linkedin" class="linkedin"></a>
            <a href="https://github.com/Xalemg"  target="_blank"><img src="img/github.png" alt="Github" class="iconoRedes"></a>
         </div>
-        <p class="copyright">© Copyright 2018 Portfolio de Alex</p>
+        <p class="copyright">© Copyright 2019 Portfolio de Alex</p>
     </footer>
     <script src="js/navbar.js"></script>
     <script src="js/menu.js"></script>

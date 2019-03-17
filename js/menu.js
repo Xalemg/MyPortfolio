@@ -16,6 +16,12 @@ function scrollSobreMi() {
     var elem = document.getElementsByClassName("sobreMi")[0];
     elem.scrollIntoView({block: "start", behavior: "smooth"});
 }
+//Projects
+function scrollProjects() {
+    closeMenu();
+    var elem = document.getElementsByClassName("Proyectos")[0];
+    elem.scrollIntoView({block: "start", behavior: "smooth"});
+}
 //Habilidades
 function scrollHabilidades() {
     closeMenu();
