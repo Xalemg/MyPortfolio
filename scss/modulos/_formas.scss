@@ -4,7 +4,6 @@
     float: left;
 }
 @mixin trapecioIzda {
-    z-index: 10;
     margin-top: -7vh;
     margin-bottom: -8vh;
     padding-top: 7vh;
@@ -13,7 +12,6 @@
     background-color: $verdeApagado;
     width: 97%;
     height: 110vh;
-    z-index: 10;
     -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
     clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
     &:after {
@@ -28,12 +26,15 @@
     }
 }
 
+@mixin parallelogram {    
+    -webkit-clip-path: polygon(0 85%, 0 0, 100% 15%, 100% 100%);
+    clip-path: polygon(0 85%, 0 0, 100% 15%, 100% 100%);
+}
+
 @mixin trapecioDcha {    
     float: right;
-    z-index: 10;
     position: relative;
     padding-top: 7vh;
-    z-index: 10;
     background-color: $blanco;
     color: $azulOscuro;
     width: 97%;
@@ -60,12 +61,10 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 50% 100%, 0 100%, 0% 25%);
 
 %contacto {
     width: 100%;
-    z-index: 10;
     margin-top: -25vh;
     margin-bottom: -8vh;
     padding-top: 7%;
     padding-bottom: 7vh;
-    z-index: 10;
     float: left;
     position: relative;
     background-color: $verdeApagado;

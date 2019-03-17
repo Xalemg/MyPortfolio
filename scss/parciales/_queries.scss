@@ -62,9 +62,7 @@
             
         }
         .habilidades {
-            background-color: $verdeApagado;
             margin-top: 30px;
-            color: $blanco;
             grid-template-columns: 5.5fr 4.5fr;
             grid-template-rows: 3fr 9fr;
             display: grid;
@@ -80,7 +78,6 @@
                 -webkit-clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
                 clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
                 align-content: center;
-                background-color: $blanco;
                 height: 50%;
                 margin-top: 5%;
                 grid-row-gap: 1em;
@@ -107,13 +104,14 @@
         .educacion {
             @include trapecioDcha;
             margin-left: 0;
-            
+            z-index: 16;
             li {
                 font-size: 0.9em;
             }
         }
         .experiencia {
             @include trapecioIzda;
+            z-index: 16;
             padding-top: 7vh;
             border-left: 1px solid white;
             margin-left:-1px;

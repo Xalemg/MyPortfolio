@@ -1,7 +1,10 @@
 .habilidades {
     @include trapecioDcha;
     text-align: right;
+    z-index: 15;
     overflow: visible;
+    color: $blanco;
+    background-color: $verdeApagado;
     @supports (display : grid) {
         grid-area: habilidades;
     }
@@ -72,8 +75,9 @@
 
     .grid-iconos {
         overflow: visible;
+        background-color: $blanco;
         width: 90%;
-        height: 280px;
+        padding-top: 5px;
         margin: 3em auto 0 auto;
         display: flex;
         align-content: flex-start;

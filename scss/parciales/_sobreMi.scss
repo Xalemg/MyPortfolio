@@ -1,6 +1,7 @@
 
 .sobreMi{
     @include trapecioIzda;
+    z-index: 10;
     @supports (display : grid) {
         grid-area: sobreMi;
     }

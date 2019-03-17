@@ -1,5 +1,6 @@
 .experiencia {
     @include trapecioDcha;
+    z-index: 10;
     @supports (display : grid) {
         grid-area: experiencia;
     }
@@ -12,5 +13,9 @@
         padding-right: 8%; 
         padding-left: 8%; 
 
+    }
+    li{
+        font-size: 0.9rem;
+        margin:  2.4em 0;
     }
 }
