@@ -310,6 +310,7 @@ template {
 
 .contacto {
   width: 100%;
+  z-index: 10;
   margin-top: -25vh;
   margin-bottom: -8vh;
   padding-top: 7%;
@@ -835,7 +836,7 @@ template {
   .shadowSobreMi {
     grid-area: sobreMi;
     position: absolute;
-    z-index: -100;
+    z-index: 5;
     content: "";
     background: rgba(0, 0, 0, 0.5);
     left: 5px;
@@ -852,7 +853,7 @@ template {
 @supports (display: grid) {
   .shadowHabilidades {
     position: absolute;
-    z-index: -100;
+    z-index: 5;
     content: "";
     background: rgba(0, 0, 0, 0.5);
     left: -5px;
@@ -869,7 +870,7 @@ template {
   .shadowEducacion {
     grid-area: sobreMi;
     position: absolute;
-    z-index: -100;
+    z-index: 5;
     content: "";
     background: rgba(0, 0, 0, 0.5);
     left: 5px;
@@ -886,7 +887,7 @@ template {
 @supports (display: grid) {
   .shadowExperiencia {
     position: absolute;
-    z-index: -100;
+    z-index: 5;
     content: "";
     background: rgba(0, 0, 0, 0.5);
     left: -5px;
@@ -942,7 +943,7 @@ body {
         grid-template-columns: 1fr 10fr 10fr 1fr;
     -ms-grid-rows: 100vh 680px 680px 680px 680px auto;
         grid-template-rows: 100vh 680px 680px 680px 680px auto;
-        grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
+        grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" "educacion educacion educacion ." ". experiencia experiencia experiencia" "contacto contacto contacto contacto";
   }
 }
 
@@ -1263,6 +1264,7 @@ nav .tcon-transform + ul {
 }
 
 .sobreMi {
+  z-index: 10;
   margin-top: -7vh;
   margin-bottom: -8vh;
   padding-top: 7vh;
@@ -1316,6 +1318,7 @@ nav .tcon-transform + ul {
 
 .habilidades {
   float: right;
+  z-index: 10;
   position: relative;
   padding-top: 7vh;
   background-color: #FFFFFF;
@@ -1454,6 +1457,7 @@ nav .tcon-transform + ul {
 }
 
 .educacion {
+  z-index: 10;
   margin-top: -7vh;
   margin-bottom: -8vh;
   padding-top: 7vh;
@@ -1506,6 +1510,7 @@ nav .tcon-transform + ul {
 
 .experiencia {
   float: right;
+  z-index: 10;
   position: relative;
   padding-top: 7vh;
   background-color: #FFFFFF;
@@ -1549,7 +1554,6 @@ nav .tcon-transform + ul {
 }
 
 .contacto {
-  z-index: 2;
   text-align: center;
 }
 
@@ -1615,7 +1619,7 @@ nav .tcon-transform + ul {
     .contacto form {
       display: -ms-grid;
       display: grid;
-          grid-template-areas: "nombre email" "texto texto" " enviar enviar";
+          grid-template-areas: "nombre email" "texto texto" " enviar enviar";
       -ms-grid-columns: 45% 45%;
           grid-template-columns: 45% 45%;
       margin-left: 15%;
@@ -1743,14 +1747,14 @@ footer .copyright {
           grid-template-columns: 1fr 18fr 18fr 1fr;
       -ms-grid-rows: 102vh 500px 580px 720px 580px;
           grid-template-rows: 102vh 500px 580px 720px 580px;
-          grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". educacion experiencia ." "contacto contacto contacto contacto";
+          grid-template-areas: "portada portada portada portada" "sobreMi sobreMi sobreMi ." " . habilidades habilidades habilidades" ". educacion experiencia ." "contacto contacto contacto contacto";
     }
     body .main .sobreMi {
       margin-top: -15px;
       display: -ms-grid;
       display: grid;
       position: relative;
-          grid-template-areas: ". titulo" "foto parrafo";
+          grid-template-areas: ". titulo" "foto parrafo";
       -ms-grid-columns: 2fr 8fr;
           grid-template-columns: 2fr 8fr;
       -ms-grid-rows: 2fr 8fr;
@@ -1786,7 +1790,7 @@ footer .copyright {
           grid-template-rows: 3fr 9fr;
       display: -ms-grid;
       display: grid;
-          grid-template-areas: "iconos titulo" "iconos caja";
+          grid-template-areas: "iconos titulo" "iconos caja";
     }
     body .main .habilidades h2 {
       -ms-grid-row: 1;
@@ -1828,6 +1832,7 @@ footer .copyright {
     }
     body .main .educacion {
       float: right;
+      z-index: 10;
       position: relative;
       padding-top: 7vh;
       background-color: #FFFFFF;
@@ -1855,6 +1860,7 @@ footer .copyright {
       font-size: 0.9em;
     }
     body .main .experiencia {
+      z-index: 10;
       margin-top: -7vh;
       margin-bottom: -8vh;
       padding-top: 7vh;
@@ -1892,7 +1898,7 @@ footer .copyright {
       -ms-grid-column: 3;
       grid-area: experiencia;
       position: absolute;
-      z-index: -1;
+      z-index: 6;
       content: "";
       background: rgba(0, 0, 0, 0.5);
       left: 5px;
@@ -1917,7 +1923,7 @@ footer .copyright {
     }
     body .main .shadowContacto {
       position: absolute;
-      z-index: -100;
+      z-index: 5;
       content: "";
       background: rgba(0, 0, 0, 0.5);
       left: 5px;
@@ -1934,7 +1940,7 @@ footer .copyright {
   }
   @media (min-width: 1024px) {
     body .main {
-          grid-template-areas: "portada portada portada portada portada portada" ". sobreMi sobreMi sobreMi sobreMi ." ". habilidades habilidades habilidades habilidades ." ". . educacion experiencia . ." ". contacto contacto contacto contacto.";
+          grid-template-areas: "portada portada portada portada portada portada" ". sobreMi sobreMi sobreMi sobreMi ." ". habilidades habilidades habilidades habilidades ." ". . educacion experiencia . ." ". contacto contacto contacto contacto.";
       -ms-grid-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
           grid-template-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
     }

@@ -1,6 +1,5 @@
 .contacto {
     @extend %contacto;
-    z-index: 2;
     text-align: center;
     @supports (display: grid) {
         grid-area: contacto;

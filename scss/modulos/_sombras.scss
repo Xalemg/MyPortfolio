@@ -3,7 +3,7 @@
   @supports (display: grid) {
     grid-area: sobreMi;
     position: absolute;
-    z-index: -100;
+    z-index: 5;
     content: "";
     background: rgba(0, 0, 0, .5);
     left: 5px;
@@ -20,7 +20,7 @@
 .shadowHabilidades {
   @supports (display: grid) {
     position: absolute;
-    z-index: -100;
+    z-index: 5;
     content: "";
     background: rgba(0, 0, 0, .5);
     left: -5px;
@@ -36,7 +36,7 @@
   @supports (display: grid) {
     grid-area: sobreMi;
     position: absolute;
-    z-index: -100;
+    z-index: 5;
     content: "";
     background: rgba(0, 0, 0, .5);
     left: 5px;
@@ -52,7 +52,7 @@
 .shadowExperiencia {
   @supports (display: grid) {
     position: absolute;
-    z-index: -100;
+    z-index: 5;
     content: "";
     background: rgba(0, 0, 0, .5);
     left: -5px;

@@ -4,6 +4,7 @@
     float: left;
 }
 @mixin trapecioIzda {
+    z-index: 10;
     margin-top: -7vh;
     margin-bottom: -8vh;
     padding-top: 7vh;
@@ -28,6 +29,7 @@
 
 @mixin trapecioDcha {    
     float: right;
+    z-index: 10;
     position: relative;
     padding-top: 7vh;
     background-color: $blanco;
@@ -56,6 +58,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 50% 100%, 0 100%, 0% 25%);
 
 %contacto {
     width: 100%;
+    z-index: 10;
     margin-top: -25vh;
     margin-bottom: -8vh;
     padding-top: 7%;
