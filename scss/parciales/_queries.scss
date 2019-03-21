@@ -136,8 +136,7 @@
         .experiencia, .educacion {
             margin-top: -70px;
             box-sizing: content-box;
-            background-color: $blanco;
-            color: $azulOscuro;
+            @include fondoBlanco;
             padding-top: 15%;
         }
         .contacto {

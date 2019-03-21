@@ -1319,8 +1319,6 @@ nav .tcon-transform + ul {
 .proyectos {
   -webkit-clip-path: polygon(0 85%, 0 0, 100% 15%, 100% 100%);
   clip-path: polygon(0 85%, 0 0, 100% 15%, 100% 100%);
-  -webkit-clip-path: polygon(0 85%, 0 0, 100% 15%, 100% 100%);
-  clip-path: polygon(0 85%, 0 0, 100% 15%, 100% 100%);
   position: relative;
   z-index: 11;
   height: 125%;
@@ -1490,6 +1488,8 @@ nav .tcon-transform + ul {
   clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
   position: relative;
   z-index: 10;
+  background-color: #FFFFFF;
+  color: #02387a;
 }
 
 .educacion:after {
@@ -1541,6 +1541,8 @@ nav .tcon-transform + ul {
   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
   z-index: 10;
+  background-color: #FFFFFF;
+  color: #02387a;
   text-align: right;
   padding-top: 12vh;
 }
@@ -1692,8 +1694,8 @@ nav .tcon-transform + ul {
 }
 
 footer {
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 50% 100%, 0 100%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 50% 100%, 0 100%, 0% 25%);
+  -webkit-clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
+  clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
   padding-top: 60px;
   text-align: center;
   position: relative;

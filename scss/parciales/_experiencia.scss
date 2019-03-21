@@ -1,6 +1,7 @@
 .experiencia {
     @include trapecioDcha;
     z-index: 10;
+    @include fondoBlanco;
     @supports (display : grid) {
         grid-area: experiencia;
     }

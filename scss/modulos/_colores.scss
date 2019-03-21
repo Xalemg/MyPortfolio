@@ -8,3 +8,8 @@ $backgroundMenuSolido: #1b487d;
 $bordeAzul : #091e38;
 $negro : black;
 $backgroundProyectos: #c9c9c9b7;
+
+@mixin fondoBlanco {
+    background-color: $blanco;
+    color: $azulOscuro;
+}
