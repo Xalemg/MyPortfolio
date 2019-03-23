@@ -1,11 +1,15 @@
 .proyectos {
     @include parallelogram;
     position: relative;
+    @include fondoBlanco;
     z-index: 11;
     height: 125%;
+    top: -3%;
     margin-top: -50px;
     background-color: $blanco;
     @supports (display: grid) {
         grid-area: proyectos;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 2fr 3fr 3fr 3fr;
     }
 }
