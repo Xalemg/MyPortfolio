@@ -843,9 +843,23 @@ template {
     -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
     clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
     width: 100.2%;
-    height: 109%;
+    height: 110%;
     grid-area: sobreMi;
     margin-top: 0;
+  }
+}
+
+@supports (display: grid) {
+  .shadowProyectos {
+    -webkit-clip-path: polygon(0 85%, 0 0, 100% 15%, 100% 100%);
+    clip-path: polygon(0 85%, 0 0, 100% 15%, 100% 100%);
+    grid-area: proyectos;
+    position: absolute;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.5);
+    width: 101.8%;
+    top: -6%;
+    height: 120%;
   }
 }
 
@@ -856,7 +870,7 @@ template {
     content: "";
     background: rgba(0, 0, 0, 0.5);
     left: -5px;
-    top: 1%;
+    top: 3%;
     -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
     width: 101%;
@@ -1976,6 +1990,10 @@ footer .copyright {
           grid-template-areas: "portada portada portada portada portada portada" ". sobreMi sobreMi sobreMi sobreMi ." ". proyectos proyectos proyectos proyectos ." ". habilidades habilidades habilidades habilidades ." ". . educacion experiencia . ." ". contacto contacto contacto contacto.";
       -ms-grid-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
           grid-template-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
+    }
+    body .main .proyectos {
+      left: -1%;
+      width: 102%;
     }
   }
   @media (min-width: 1280px) {

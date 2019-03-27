@@ -172,6 +172,11 @@
                 ". . educacion experiencia . ."
                 ". contacto contacto contacto contacto.";
                 grid-template-columns: 1fr 1fr minmax(487px, 572px) minmax(487px, 572px) 1fr 1fr;
+                .proyectos{
+                    left: -1%;
+                    width: 102%;
+                }
+
             }
         }
     }
