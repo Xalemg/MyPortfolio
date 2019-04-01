@@ -8,8 +8,19 @@
     margin-top: -50px;
     background-color: $blanco;
     @supports (display: grid) {
+        padding-top: 100px;
+        width: 100%;
         grid-area: proyectos;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 2fr 3fr 3fr 3fr;
+        grid-template-columns:0vw 30vw 30vw 30vw 0vw;
+        grid-template-rows:50vw 30vw 30vw 30vw;
+        display: grid;
+        grid-template-areas:
+        ". titulo_proyectos  titulo_proyectos  titulo_proyectos ."
+        ". proyecto_1 proyecto_2 proyecto_3 ."
+        ". proyecto_4 . proyecto_5 .";
+
+        .titulo-proyectos {
+            grid-area: titulo_proyectos;
+        }
     }
 }

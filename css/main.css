@@ -1345,11 +1345,22 @@ nav .tcon-transform + ul {
 
 @supports (display: grid) {
   .proyectos {
+    padding-top: 100px;
+    width: 100%;
     grid-area: proyectos;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: 2fr 3fr 3fr 3fr;
-        grid-template-rows: 2fr 3fr 3fr 3fr;
+    -ms-grid-columns: 0vw 30vw 30vw 30vw 0vw;
+        grid-template-columns: 0vw 30vw 30vw 30vw 0vw;
+    -ms-grid-rows: 50vw 30vw 30vw 30vw;
+        grid-template-rows: 50vw 30vw 30vw 30vw;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: ". titulo_proyectos  titulo_proyectos  titulo_proyectos ." ". proyecto_1 proyecto_2 proyecto_3 ." ". proyecto_4 . proyecto_5 .";
+  }
+  .proyectos .titulo-proyectos {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-area: titulo_proyectos;
   }
 }
 
