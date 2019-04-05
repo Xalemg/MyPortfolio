@@ -1,15 +1,18 @@
 //ARCHIVO ENCARGADO DE GESTIONAR LAS ANIMACIONES DE LOS ICONOS DE HABILIDAD
+const basicKnowledge ='Basic Knowledge';
+const mediumKnowledge ='Medium Knowledge';
+const advancedKnowledge ='Advance Knowledge';
 
 
 //Inicializa los objetos con la informacion de las habilidades
-let php = new Lenguaje ("Php","php", 25 , "Conocimientos básicos");
-let css = new Lenguaje ("Css", "css", 95, "Conocimientos avanzados");
-let sass = new Lenguaje ("Sass", "sass", 68 , "Conocimientos inermedios");
-let java = new Lenguaje ("Java","java", 85 , "Conocimientos avanzados");
-let unity = new Lenguaje ("Unity","unity", 45 , "Conocimientos intermedios");
-let cSharp = new Lenguaje ("C#","cSharp", 30 , "Conocimientos básicos");
-let android = new Lenguaje ("Android","android", 70 , "Conocimientos intermedios");
-let javascript = new Lenguaje ("Javascript","js", 65 , "Conocimientos intermedios");
+let php = new Lenguaje ("Php","php", 25 , basicKnowledge);
+let css = new Lenguaje ("Css", "css", 95, advancedKnowledge);
+let sass = new Lenguaje ("Sass", "sass", 55 , mediumKnowledge);
+let java = new Lenguaje ("Java","java", 75 , advancedKnowledge);
+let unity = new Lenguaje ("Unity","unity", 45 , mediumKnowledge);
+let cSharp = new Lenguaje ("C#","cSharp", 50 , mediumKnowledge);
+let android = new Lenguaje ("Android","android", 35 , basicKnowledge);
+let javascript = new Lenguaje ("Javascript","js", 85 , advancedKnowledge);
 
 let habilidades = [php, css, sass, java, unity, cSharp, android, javascript];
 
